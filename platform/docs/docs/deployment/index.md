@@ -2,12 +2,12 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: Deployment Overview
-summary: Comprehensive guide to deploying the OHIF Viewer as a standalone web application or embedded iframe, covering data source configuration, security considerations, and various deployment options with examples for different hosting environments.
+summary: Comprehensive guide to deploying the Fanoni Imaging as a standalone web application or embedded iframe, covering data source configuration, security considerations, and various deployment options with examples for different hosting environments.
 ---
 
 # Deployment
 
-The OHIF Viewer can be served as a stand-alone PWA ([progressive web
+The Fanoni Imaging can be served as a stand-alone PWA ([progressive web
 application][pwa-url]) by building and hosting a collection of static assets or be embedded in other web applications via an iframe if needed. In
 either case, you will need to configure your instance of the Viewer so that it
 can connect to your data source (the database or PACS that provides the data
@@ -24,7 +24,7 @@ reach out to for help.
 
 ### Stand-alone Viewer
 
-Deploying the OHIF Viewer as a stand-alone web application provides many
+Deploying the Fanoni Imaging as a stand-alone web application provides many
 benefits, but comes at the cost of time and complexity. Some benefits include:
 
 _Today:_
@@ -40,7 +40,7 @@ _In the future:_
 
 #### Hosted Static Assets
 
-At the end of the day, a production OHIF Viewer instance is a collection of
+At the end of the day, a production Fanoni Imaging instance is a collection of
 HTML, CSS, JS, Font Files, and Images. We "build" those files from our
 `source code` with configuration specific to our project. We then make those
 files publicly accessible by hosting them on a Web Server.
@@ -49,7 +49,7 @@ files publicly accessible by hosting them on a Web Server.
 
 "Building", or creating, the files you will need is the same regardless of the
 web host you choose. You can find detailed instructions on how to configure and
-build the OHIF Viewer in our
+build the Fanoni Imaging in our
 ["Build for Production" guide](./build-for-production.md).
 
 ##### Part 2 - Host Your App
@@ -76,16 +76,16 @@ _Advanced_
 ### Embedded Viewer (iframe)
 
 `OHIF-v3` has deprecated deploying the viewer as an embedded viewer via a script
-tag as the number of underlying libraries that run web workers are increasing for OHIF. An example of these libraries is OHIF's 3D rendering functionality that is provided by
+tag as the number of underlying libraries that run web workers are increasing for Fanoni Imaging. An example of these libraries is Fanoni Imaging's 3D rendering functionality that is provided by
 `vtk-js`.
 
-However, you can still embed the viewer using an iframe. You can utilize the iframe element to load the OHIF viewer and establish communication with it using the postMessage API if needed.
+However, you can still embed the viewer using an iframe. You can utilize the iframe element to load Fanoni Imaging viewer and establish communication with it using the postMessage API if needed.
 Read more about how to use the iframe [here](./iframe.md).
 
 
 ## Data
 
-The OHIF Viewer is able to connect to any data source that implements the [DICOM
+The Fanoni Imaging is able to connect to any data source that implements the [DICOM
 Web Standard][dicom-web-standard]. [DICOM Web][dicom-web] refers to RESTful
 DICOM Services -- a recently standardized set of guidelines for exchanging
 medical images and imaging metadata over the internet. Not all archives fully
@@ -93,7 +93,7 @@ support it yet, but it is gaining wider adoption.
 
 ### Configure Connection
 
-If you have an existing archive and intend to host the OHIF Viewer at the same
+If you have an existing archive and intend to host the Fanoni Imaging at the same
 domain name as your archive, then connecting the two is as simple as following
 the steps laid out in our
 [Configuration Essentials Guide](./../configuration/configurationFiles.md).
@@ -105,7 +105,7 @@ We provide some guidance on configuring a local image archive in our
 guide. Hosting an archive remotely is a little trickier. You can check out some
 of our [advanced recipes](#recipes) for modeled setups that may work for you.
 
-#### What if I intend to host the OHIF Viewer at a different domain?
+#### What if I intend to host the Fanoni Imaging at a different domain?
 
 There are two important steps to making sure this setup works:
 
@@ -137,7 +137,7 @@ endpoint that returns **application/json** formatted text.
 If you do not have an API, you can simply return a text file containing the JSON
 from any web server.
 
-You tell the OHIF viewer to use JSON by using the `dicomjson` datasource and
+You tell Fanoni Imaging viewer to use JSON by using the `dicomjson` datasource and
 appending `'?url='` query to your mode's route:
 
 e.g.
@@ -203,7 +203,7 @@ _Sample JSON format:_
 ```
 
 More info on this JSON format can be found here
-[Issue #1500](https://github.com/OHIF/Viewers/issues/1500)
+[Issue #1500](https://github.com/Fanoni Imaging/Viewers/issues/1500)
 
 **Implementation Notes:**
 
@@ -215,11 +215,11 @@ More info on this JSON format can be found here
    `dicomjson:https://image-server/my-image.dcm`
 2. The JSON format above is compatible with >= v3.7.8 of the application in `V2`
    version. Older versions of the viewer used a different JSON format. As of
-   20/04/20 the public [https://viewer.ohif.org/] is a pre 3.0 version that does
+   20/04/20 the public [https://imaging.fanoni.ai] is a pre 3.0 version that does
    not support this format yet.
 3. The JSON format is case-sensitive. Please ensure you have matched casing with
    the naturalised Dicom format referenced in
-   [Issue #1500](https://github.com/OHIF/Viewers/issues/1500).
+   [Issue #1500](https://github.com/Fanoni Imaging/Viewers/issues/1500).
 
 _CORS Issues (Cross-Origin Resource Sharing)_
 
@@ -265,7 +265,7 @@ Coming soon
 > you've gotten it right. Don't hesitate to work with professional auditors, or
 > [enlist help from experts](../help).
 
-The OHIF Viewer can be configured to work with authorization servers that
+The Fanoni Imaging can be configured to work with authorization servers that
 support one or more of the OpenID-Connect authorization flows. The Viewer finds
 it's OpenID-Connect settings on the `oidc` configuration key. You can set these
 values following the instructions laid out in the

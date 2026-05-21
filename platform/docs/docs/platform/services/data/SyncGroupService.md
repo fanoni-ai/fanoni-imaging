@@ -2,14 +2,14 @@
 sidebar_position: 8
 sidebar_label: SyncGroup Service
 title: SyncGroup Service
-summary: Documentation for OHIF's SyncGroupService, which manages synchronization between multiple viewports based on various criteria like camera position, window level, and slice position, with both hanging protocol and manual configuration options.
+summary: Documentation for Fanoni Imaging's SyncGroupService, which manages synchronization between multiple viewports based on various criteria like camera position, window level, and slice position, with both hanging protocol and manual configuration options.
 ---
 
 # Sync Group Service
 
 ## Overview
 
-The `SyncGroupService` is responsible for managing synchronization groups in the OHIF Viewer. Synchronization groups allow multiple viewports to be synchronized based on various criteria, such as camera position, window level, zoom/pan, and image slice position. This service provides a centralized way to create, update, and manage synchronization groups.
+The `SyncGroupService` is responsible for managing synchronization groups in the Fanoni Imaging. Synchronization groups allow multiple viewports to be synchronized based on various criteria, such as camera position, window level, zoom/pan, and image slice position. This service provides a centralized way to create, update, and manage synchronization groups.
 
 Right now, synchronization groups can be defined in the hanging protocols or manually assigning buttons.
 

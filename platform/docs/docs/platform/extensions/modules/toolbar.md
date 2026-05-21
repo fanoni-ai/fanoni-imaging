@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Toolbar
 title: Toolbar Module
-summary: Documentation for OHIF Toolbar Module, which provides UI components and evaluators for the application's toolbar, supporting custom button types, advanced state management, and conditional rendering based on viewport and modality requirements.
+summary: Documentation for Fanoni Imaging Toolbar Module, which provides UI components and evaluators for the application's toolbar, supporting custom button types, advanced state management, and conditional rendering based on viewport and modality requirements.
 ---
 
 # Module: Toolbar
@@ -293,7 +293,7 @@ function modeFactory({ modeConfiguration }) {
 
 
 :::note
-By default OHIF's default layout (`extensions/default/src/ViewerLayout/index.tsx`) which is used in all modes use a Toolbar component that creates a
+By default Fanoni Imaging's default layout (`extensions/default/src/ViewerLayout/index.tsx`) which is used in all modes use a Toolbar component that creates a
 `primary` section for tools. That is why we are creating a `primary` section in the example above.
 
 Layouts are also customizable, and you can create your own layout in your extensions and provide it to your modes view `getLayoutTemplateModule` module.

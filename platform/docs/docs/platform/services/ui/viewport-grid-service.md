@@ -2,7 +2,7 @@
 sidebar_position: 6
 sidebar_label: Viewport Grid Service
 title: Viewport Grid Service
-summary: Documentation for OHIF's Viewport Grid Service, which manages the layout and configuration of the viewer's viewport grid, handling active viewport selection, display set assignment, and layout changes with event broadcasting capabilities.
+summary: Documentation for Fanoni Imaging's Viewport Grid Service, which manages the layout and configuration of the viewer's viewport grid, handling active viewport selection, display set assignment, and layout changes with event broadcasting capabilities.
 ---
 
 # Viewport Grid Service
@@ -45,7 +45,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 | ---------------------- | -------------------------- |
 | [ViewportGridProvider] | Baked into Dialog Provider |
 
-`*` - Denotes maintained by OHIF
+`*` - Denotes maintained by Fanoni Imaging
 
 ## State
 

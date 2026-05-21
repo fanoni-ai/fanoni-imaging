@@ -2,11 +2,11 @@
 sidebar_position: 6
 sidebar_label: Auth
 title: Authorization and Authentication
-summary: Guide to configuring OpenID-Connect authentication in OHIF Viewer, including setup of authorization flows, token handling, and implementation details for securing access to medical imaging data.
+summary: Guide to configuring OpenID-Connect authentication in Fanoni Imaging, including setup of authorization flows, token handling, and implementation details for securing access to medical imaging data.
 ---
 
 # Authorization and Authentication
-The OHIF Viewer can be configured to work with authorization servers that support one or more of the OpenID-Connect authorization flows. The Viewer finds it's OpenID-Connect settings on the oidc configuration key. You can set these values in your configuration files. For instance you can take a look at our
+The Fanoni Imaging can be configured to work with authorization servers that support one or more of the OpenID-Connect authorization flows. The Viewer finds it's OpenID-Connect settings on the oidc configuration key. You can set these values in your configuration files. For instance you can take a look at our
 `google.js` configuration file.
 
 
@@ -140,7 +140,7 @@ oidc: [
 ],
 ```
 
-In fact, since browsers are blocking third-party cookies, the Implicit Flow will cease functioning in the future (not specific to OHIF). Read more [here](https://support.okta.com/help/s/article/FAQ-How-Blocking-Third-Party-Cookies-Can-Potentially-Impact-Your-Okta-Environment?language=en_US). It is recommended to use the Authorization Code Flow and begin migrating to it.
+In fact, since browsers are blocking third-party cookies, the Implicit Flow will cease functioning in the future (not specific to Fanoni Imaging). Read more [here](https://support.okta.com/help/s/article/FAQ-How-Blocking-Third-Party-Cookies-Can-Potentially-Impact-Your-Okta-Environment?language=en_US). It is recommended to use the Authorization Code Flow and begin migrating to it.
 
 :::note
 For the Authorization Code Flow, when authenticating against Google, you must add the `client_secret` to the configuration as well. Unfortunately, this seems to occur only with Google.

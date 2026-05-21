@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: SOP Class Handler
 title: SOP Class Handler Module
-summary: Documentation for OHIF SOP Class Handler Module, which processes specific DICOM SOP classes into displayable sets, supporting various medical imaging formats and defining how different types of DICOM data are prepared for viewing.
+summary: Documentation for Fanoni Imaging SOP Class Handler Module, which processes specific DICOM SOP classes into displayable sets, supporting various medical imaging formats and defining how different types of DICOM data are prepared for viewing.
 ---
 # Module: SOP Class Handler
 
@@ -110,13 +110,13 @@ You can find another example for this mapping between raw metadata and displaySe
 ## `@ohif/app` usage
 
 We use the `sopClassHandlerModule`s in `DisplaySetService` where we
-transform instances from the raw metadata format to a OHIF displaySet format.
+transform instances from the raw metadata format to a Fanoni Imaging displaySet format.
 You can read more about DisplaySetService here.
 
 <!-- prettier-ignore-start -->
 [sop-class-link]: http://dicom.nema.org/dicom/2013/output/chtml/part04/sect_B.5.html
-[dicom-html-sop]: https://github.com/OHIF/Viewers/blob/master/extensions/dicom-html/src/OHIFDicomHtmlSopClassHandler.js#L4-L12
-[dicom-pdf-sop]: https://github.com/OHIF/Viewers/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6
-[dicom-micro-sop]: https://github.com/OHIF/Viewers/blob/master/extensions/dicom-microscopy/src/DicomMicroscopySopClassHandler.js#L5-L7
-[dicom-seg-sop]: https://github.com/OHIF/Viewers/blob/master/extensions/dicom-segmentation/src/OHIFDicomSegSopClassHandler.js#L5-L7
+[dicom-html-sop]: https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-html/src/OHIFDicomHtmlSopClassHandler.js#L4-L12
+[dicom-pdf-sop]: https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6
+[dicom-micro-sop]: https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-microscopy/src/DicomMicroscopySopClassHandler.js#L5-L7
+[dicom-seg-sop]: https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-segmentation/src/OHIFDicomSegSopClassHandler.js#L5-L7
 <!-- prettier-ignore-end -->

@@ -2,7 +2,7 @@
 sidebar_position: 6
 sidebar_label: Panel
 title: Panel Module
-summary: Documentation for OHIF Panel Module, which provides UI components for the application's side panels, allowing extensions to contribute content that appears in left and right sidebars with proper event triggering and state management.
+summary: Documentation for Fanoni Imaging Panel Module, which provides UI components for the application's side panels, allowing extensions to contribute content that appears in left and right sidebars with proper event triggering and state management.
 ---
 
 # Module: Panel

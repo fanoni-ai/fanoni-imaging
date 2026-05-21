@@ -2,19 +2,19 @@
 sidebar_position: 6
 sidebar_label: Configuration UI
 title: Configuration UI
-summary: Describes interfaces for implementing configurable data sources in OHIF, with details on BaseDataSourceConfigurationAPI and BaseDataSourceConfigurationAPIItem to enable generic UIs for hierarchical data source configuration.
+summary: Describes interfaces for implementing configurable data sources in Fanoni Imaging, with details on BaseDataSourceConfigurationAPI and BaseDataSourceConfigurationAPIItem to enable generic UIs for hierarchical data source configuration.
 ---
 
 # Configuration UI
 
-OHIF provides for a generic mechanism for configuring a data source. This is
+Fanoni Imaging provides for a generic mechanism for configuring a data source. This is
 most useful for those organizations with several data sources
 that share common (path) hierarchies. For example, an organization may have several DICOM stores
 in the Google Cloud Healthcare realm where each is organized into various projects,
 location, data sets and DICOM stores.
 
 By implementing the `BaseDataSourceConfigurationAPI` and
-`BaseDataSourceConfigurationAPIItem` in an [OHIF extension](../../platform/extensions/index.md), a data source can
+`BaseDataSourceConfigurationAPIItem` in an [Fanoni Imaging extension](../../platform/extensions/index.md), a data source can
 be made configurable via the generic UI as is depicted below for a
 Google Cloud Healthcare data source.
 
@@ -22,7 +22,7 @@ Google Cloud Healthcare data source.
 
 :::tip
 A datasource root URI can be [fully or partially specified](../../deployment/google-cloud-healthcare.md#configuring-google-cloud-healthcare-as-a-datasource-in-ohif)
-in the OHIF configuration file.
+in Fanoni Imaging configuration file.
 :::
 
 ## `BaseDataSourceConfigurationAPIItem` interface
@@ -106,7 +106,7 @@ items path.
 For example, for the Google Cloud Healthcare API, this would take the current item
 (say a data set) and queries and returns its sub-items (i.e. all of the DICOM stores
 contained in that data set). Furthermore, whenever the item to set is a DICOM store,
-the Google Cloud Healthcare API implementation would update the OHIF data source
+the Google Cloud Healthcare API implementation would update Fanoni Imaging data source
 associated with this instance to point to that DICOM store.
 
 #### `getConfiguredItems`
@@ -119,11 +119,11 @@ with the labels returned from `getItemLabels`.
 ## Creation via Customization Module
 
 The generic UI (i.e. `DataSourceConfigurationComponent`) uses the
-[OHIF UI customization service](../../platform/services/customization-service/customizationService.md) to
+[Fanoni Imaging UI customization service](../../platform/services/customization-service/customizationService.md) to
 instantiate the `BaseDataSourceConfigurationAPI` instance to configure a data source.
 
 A UI configurable data source should have a `configurationAPI` field as part of
-its `configuration` in the OHIF config file. The `configurationAPI` value is the
+its `configuration` in Fanoni Imaging config file. The `configurationAPI` value is the
 customization id of the customization module that provides the factory method
 to instantiate the `BaseDataSourceConfigurationAPI` instance.
 

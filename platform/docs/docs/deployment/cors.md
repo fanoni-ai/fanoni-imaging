@@ -1,24 +1,24 @@
 ---
 sidebar_position: 8
 title: Cross-Origin Resource Sharing
-summary: Detailed explanation of cross-origin security configurations for OHIF Viewer, covering CORS requirements for data source access, iframe embedding, secure contexts, and troubleshooting techniques for proper implementation.
+summary: Detailed explanation of cross-origin security configurations for Fanoni Imaging, covering CORS requirements for data source access, iframe embedding, secure contexts, and troubleshooting techniques for proper implementation.
 ---
 
-# Cross-Origin Information for OHIF
+# Cross-Origin Information for Fanoni Imaging
 
-This document describes various security configurations, settings and environments/contexts needed to fully leverage OHIF’s capabilities. One may need some configurations while others might need ALL of them - it all depends on the environment OHIF is expected to run in.
+This document describes various security configurations, settings and environments/contexts needed to fully leverage Fanoni Imaging’s capabilities. One may need some configurations while others might need ALL of them - it all depends on the environment Fanoni Imaging is expected to run in.
 
-In particular, three of OHIF’s features depend on these configurations:
-- [Embedding OHIF in an iframe](#embedding-ohif-in-an-iframe)
+In particular, three of Fanoni Imaging’s features depend on these configurations:
+- [Embedding Fanoni Imaging in an iframe](#embedding-ohif-in-an-iframe)
 - [XMLHttpRequests to fetch data from data sources](#cors-in-ohif)
 
 
-## Embedding OHIF in an iframe
+## Embedding Fanoni Imaging in an iframe
 
-As described [here](./iframe.md), there are cases where OHIF will be embedded in an iframe. The following links provide more information for setting up and configuring OHIF to work in an iframe:
+As described [here](./iframe.md), there are cases where Fanoni Imaging will be embedded in an iframe. The following links provide more information for setting up and configuring Fanoni Imaging to work in an iframe:
 
-- [OHIF iframe documentation](./iframe.md#static-build)
-- [OHIF as a Cross-origin Resource in an iframe](#ohif-as-a-cross-origin-resource-in-an-iframe)
+- [Fanoni Imaging iframe documentation](./iframe.md#static-build)
+- [Fanoni Imaging as a Cross-origin Resource in an iframe](#ohif-as-a-cross-origin-resource-in-an-iframe)
 
 ## Secure Context
 
@@ -37,15 +37,15 @@ A page embedded in an iframe is considered secure if it itself and every one of 
 
 ### Configuring/setting up a secure context
 
-[Local URLs are considered secure](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts#when_is_a_context_considered_secure), and as such whenever OHIF is accessed via a local URL (e.g. http://localhost:3000) it is running in a secure context. For example, in a development environment using the default webpack setup, OHIF can be deployed and accessed in a secure context at http://localhost:3000.
+[Local URLs are considered secure](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts#when_is_a_context_considered_secure), and as such whenever Fanoni Imaging is accessed via a local URL (e.g. http://localhost:3000) it is running in a secure context. For example, in a development environment using the default webpack setup, Fanoni Imaging can be deployed and accessed in a secure context at http://localhost:3000.
 
-The best alternative is to host OHIF over HTTPS.
+The best alternative is to host Fanoni Imaging over HTTPS.
 
 :::tip
-OHIF can be served over HTTPS in a variety of ways (these are just some examples).
+Fanoni Imaging can be served over HTTPS in a variety of ways (these are just some examples).
 - Website hosting services that offer HTTPS deployment (e.g,. Netlify) or offer HTTPS load balancers (AWS, Google Cloud etc.)
-- Setting up a reverse proxy (e.g. `nginx`) with a self-signed certificate that forwards requests to the OHIF server
-    - [An OHIF Docker image can be set up this way](./docker/docker.md#ssl).
+- Setting up a reverse proxy (e.g. `nginx`) with a self-signed certificate that forwards requests to Fanoni Imaging server
+    - [An Fanoni Imaging Docker image can be set up this way](./docker/docker.md#ssl).
 :::
 
 ## Origin Definition
@@ -64,7 +64,7 @@ See the [MDN CORS article](https://developer.mozilla.org/en-US/docs/Web/HTTP/COR
 
 ### CORS HTTP Headers
 
-The header that mostly concerns OHIF is listed below and should be configured accordingly on the DICOMweb server or any data source that OHIF would make XMLHttpRequests to for its data.
+The header that mostly concerns Fanoni Imaging is listed below and should be configured accordingly on the DICOMweb server or any data source that Fanoni Imaging would make XMLHttpRequests to for its data.
 
 ```http
 Access-Control-Allow-Origin: `<origin>` | *
@@ -78,13 +78,13 @@ Either a single, specific origin (i.e. `<origin>`) can be specified or ALL origi
 See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-allow-origin) for more information.
 :::
 
-### CORS in OHIF
+### CORS in Fanoni Imaging
 
-OHIF fetches and displays data and images from data sources. It invokes XMLHttpRequests to some data sources such as DICOMweb data sources to fetch the information to render. Typically, a DICOMweb server is hosted on a completely different origin than the one serving OHIF. As such, those XMLHttpRequests use CORS.
+Fanoni Imaging fetches and displays data and images from data sources. It invokes XMLHttpRequests to some data sources such as DICOMweb data sources to fetch the information to render. Typically, a DICOMweb server is hosted on a completely different origin than the one serving Fanoni Imaging. As such, those XMLHttpRequests use CORS.
 
-### Troubleshooting CORS in OHIF
+### Troubleshooting CORS in Fanoni Imaging
 
-The following is an example screenshot of the browser console when one of OHIF’s DICOMweb data source servers is not configured for CORS.
+The following is an example screenshot of the browser console when one of Fanoni Imaging’s DICOMweb data source servers is not configured for CORS.
 
 ![CORS browser console errors](../assets/img/cors-browser-console-errors.png)
 
@@ -97,7 +97,7 @@ Setting the appropriate CORS header varies per server or service that is hosting
 :::
 
 :::tip
-If Orthanc is the data source running in a Docker container composed with/behind nginx. And OHIF is being served at localhost:3000. The issue can be remedied by adding either of the following to Orthanc’s Docker container nginx.conf file.
+If Orthanc is the data source running in a Docker container composed with/behind nginx. And Fanoni Imaging is being served at localhost:3000. The issue can be remedied by adding either of the following to Orthanc’s Docker container nginx.conf file.
 
 ```nginx
 add_header 'Access-Control-Allow-Origin' 'http://localhost:3000' always;
@@ -121,14 +121,14 @@ add_header 'Access-Control-Allow-Origin' '*' always;
 |same-origin|Only requests from the same origin can read the resource.|
 |cross-origin|Requests from any origin can read the resource. The value is useful and [exists](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy#relationship_to_cross-origin_embedder_policy_coep) primarily for letting documents with the [COEP require-corp value](#header-values-pertinent-to-ohif-see-mdn-for-more-information-1) know that the resource is ok to be embedded|
 
-### OHIF and CORP
+### Fanoni Imaging and CORP
 
 
 #### PDF from a Cross Origin DICOMweb Data Source
 
-There are some DICOMweb data sources (e.g. dcm4chee) whereby OHIF uses the data source’s `/rendered` endpoint to embed a DICOM PDF document in the OHIF DOM using an `<object>` tag.
+There are some DICOMweb data sources (e.g. dcm4chee) whereby Fanoni Imaging uses the data source’s `/rendered` endpoint to embed a DICOM PDF document in Fanoni Imaging DOM using an `<object>` tag.
 
-As specified for the [COEP require-corp value](#header-values-pertinent-to-ohif-see-mdn-for-more-information-1), a page like OHIF with COEP header `require-corp` can embed cross-origin resources in DOM elements that have the [`crossorigin` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) OR the resource is delivered with an appropriate CORP header. The `<object>` tag does NOT support the `crossorigin` attribute. As such, the PDF must be delivered with a CORP header.
+As specified for the [COEP require-corp value](#header-values-pertinent-to-ohif-see-mdn-for-more-information-1), a page like Fanoni Imaging with COEP header `require-corp` can embed cross-origin resources in DOM elements that have the [`crossorigin` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) OR the resource is delivered with an appropriate CORP header. The `<object>` tag does NOT support the `crossorigin` attribute. As such, the PDF must be delivered with a CORP header.
 
 :::tip
 Setting the CORP header varies per server or service that is hosting the data source. The following is just one example.
@@ -139,7 +139,7 @@ For a dcm4chee DICOMweb data source composed in Docker behind nginx, the CORP he
 add_header 'Cross-Origin-Resource-Policy' 'cross-origin' always;
 ```
 
-If the dcm4chee server and the OHIF server are hosted on the same site, then the following would also work:
+If the dcm4chee server and Fanoni Imaging server are hosted on the same site, then the following would also work:
 ```nginx
 add_header 'Cross-Origin-Resource-Policy' 'same-site' always;
 ```

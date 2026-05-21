@@ -2,7 +2,7 @@
 sidebar_position: 9
 sidebar_label: Viewed Data Service
 title: Viewed Data Service
-summary: Documentation for OHIF's ViewedDataService, which tracks dataIds a user has viewed and publishes change events for incremental UI updates.
+summary: Documentation for Fanoni Imaging's ViewedDataService, which tracks dataIds a user has viewed and publishes change events for incremental UI updates.
 ---
 
 # Viewed Data Service

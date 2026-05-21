@@ -1,14 +1,14 @@
 ---
 sidebar_position: 10
 title: Nginx + Image Archive Setup
-summary: Tutorial for setting up OHIF Viewer with Nginx and PACS (Orthanc or DCM4CHEE), using Docker for a production-ready system with reverse proxy configuration to securely handle medical imaging data, including installation steps and troubleshooting tips.
+summary: Tutorial for setting up Fanoni Imaging with Nginx and PACS (Orthanc or DCM4CHEE), using Docker for a production-ready system with reverse proxy configuration to securely handle medical imaging data, including installation steps and troubleshooting tips.
 ---
 
 # Nginx + Image Archive
 
 
 At a certain point, you may want others to have access to your instance of the
-OHIF Viewer and its medical imaging data. This post covers one of many potential
+Fanoni Imaging and its medical imaging data. This post covers one of many potential
 setups that accomplish that. Please note, noticeably absent is user account
 control.
 
@@ -43,7 +43,7 @@ This setup allows us to create a setup similar to the one pictured below:
 - All web requests are routed through `nginx` image
 - `/pacs/dicom-web` is a reverse proxy for `orthanc`'s `DICOM Web` endpoints, which handles DICOM requests
 - `/pacs` is a reverse proxy for `orthanc`'s Web Admin, which is the UI for managing studies
-- All static resources for OHIF Viewer are served up by `nginx` when a matching
+- All static resources for Fanoni Imaging are served up by `nginx` when a matching
   route for that resource is requested
 
 ## Getting Started
@@ -127,9 +127,9 @@ likely want to update:
 
 - The domain: `http://127.0.0.1`
 
-#### OHIF Viewer
+#### Fanoni Imaging
 
-The OHIF Viewer's configuration is imported from a static `.js` file. The
+The Fanoni Imaging's configuration is imported from a static `.js` file. The
 configuration we use is set to a specific file when we build the viewer, and
 determined by the env variable: `APP_CONFIG`. You can see where we set its value
 in the `dockerfile` for this solution:
@@ -151,21 +151,21 @@ All other files are found in: `/docker/Nginx-Orthanc/`
 
 | Service           | Configuration                     | Docs                                        |
 | ----------------- | --------------------------------- | ------------------------------------------- |
-| OHIF Viewer       | [dockerfile][dockerfile]          | You're reading them now!                    |
+| Fanoni Imaging       | [dockerfile][dockerfile]          | You're reading them now!                    |
 | Nginx | [`/nginx.conf`][config-nginx]     |  |
 | Orthanc           | [`/orthanc.json`][config-orthanc] | [Here][orthanc-docs]                        |
 
 ## Next Steps
 
-### OHIF + Dcm4chee
+### Fanoni Imaging + Dcm4chee
 
-You can follow the similar steps above to run OHIF Viewer with Dcm4chee PACS.
+You can follow the similar steps above to run Fanoni Imaging with Dcm4chee PACS.
 
 The recipe for this setup can be found at `platform/app/.recipes/Nginx-Dcm4chee`.
 
 
 The routes are as follows:
-- `127.0.0.1` for the OHIF viewer
+- `127.0.0.1` for Fanoni Imaging viewer
 - `127.0.0.1/pacs` for the Dcm4chee UI
 
 :::info
@@ -215,7 +215,7 @@ members put together:
 [orthanc-docs]: http://book.orthanc-server.com/users/configuration.html#configuration
 [lua-resty-openidc-docs]: https://github.com/zmartzone/lua-resty-openidc
 <!-- SRC -->
-[dockerfile]: https://github.com/OHIF/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/dockerfile
-[config-nginx]: https://github.com/OHIF/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/config/nginx.conf
-[config-orthanc]: https://github.com/OHIF/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/config/orthanc.json
+[dockerfile]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/dockerfile
+[config-nginx]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/config/nginx.conf
+[config-orthanc]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/.recipes/OpenResty-Orthanc/config/orthanc.json
 <!-- prettier-ignore-end -->

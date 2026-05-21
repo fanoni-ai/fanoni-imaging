@@ -1,7 +1,7 @@
 ---
 sidebar_position: 11
 title: User Account Control
-summary: Comprehensive guide for implementing user authentication in OHIF using Keycloak, covering setup with both Orthanc and DCM4CHEE, configuration with OAuth2 proxy, SSL implementation, and detailed steps for local and production deployment scenarios.
+summary: Comprehensive guide for implementing user authentication in Fanoni Imaging using Keycloak, covering setup with both Orthanc and DCM4CHEE, configuration with OAuth2 proxy, SSL implementation, and detailed steps for local and production deployment scenarios.
 ---
 # User Account Control
 
@@ -61,9 +61,9 @@ This setup allows us to create a setup similar to the one pictured below:
 - Manages user identities, including authentication and authorization.
 - Communicates with the OAuth2 Proxy to validate user credentials and provide tokens for authenticated sessions.
 
-**OHIF Viewer:**
+**Fanoni Imaging:**
 
-- Hosted under the route /ohif-viewer, which serves the static assets of the OHIF Viewer.
+- Hosted under the route /ohif-viewer, which serves the static assets of the Fanoni Imaging.
 
 **Orthanc/DCM4chee:**
 
@@ -219,13 +219,13 @@ docker-compose up --build
 ```
 
 
-You can watch the following video, which will guide you through the process of setting up Orthanc with keycloak and OHIF locally.
+You can watch the following video, which will guide you through the process of setting up Orthanc with keycloak and Fanoni Imaging locally.
 
 We have set up two predefined users in Keycloak:
 
 - `user: admin password: admin` - Has access to keycloak portal for managing users and clients
-- `user: viewer password: viewer` - Has access to the OHIF Viewer but not the pacs-admin
-- `user: pacsadmin password: pacsadmin` - Has access to both the pacs-admin for uploading and the OHIF Viewer
+- `user: viewer password: viewer` - Has access to the Fanoni Imaging but not the pacs-admin
+- `user: pacsadmin password: pacsadmin` - Has access to both the pacs-admin for uploading and the Fanoni Imaging
 
 You can navigate to:
 
@@ -240,7 +240,7 @@ You can navigate to:
 
 ### Step 2 - Trying via a Server
 
-Now that you have successfully set up Orthanc with Keycloak and OHIF locally, you can deploy it to a server. While you can rent a server from any provider, this tutorial will demonstrate the process using Linode as an example.
+Now that you have successfully set up Orthanc with Keycloak and Fanoni Imaging locally, you can deploy it to a server. While you can rent a server from any provider, this tutorial will demonstrate the process using Linode as an example.
 
 You can watch the following video, which will guide you through the process.
 
@@ -434,9 +434,9 @@ Stop running all containers:
 - Linux: `docker stop $(docker ps -a -q)`
 
 
-#### OHIF Viewer
+#### Fanoni Imaging
 
-The OHIF Viewer's configuration is imported from a static `.js` file. The
+The Fanoni Imaging's configuration is imported from a static `.js` file. The
 configuration we use is set to a specific file when we build the viewer, and
 determined by the env variable: `APP_CONFIG`. You can see where we set its value
 in the `dockerfile` for this solution:
@@ -465,9 +465,9 @@ we add it to Keycloak in the `docker-compose` file, and you can read up on how
 to leverage custom themes in
 [Keycloak's own docs](https://www.keycloak.org/docs/latest/server_development/index.html#_themes).
 
-| Default Theme                                                          | OHIF Theme                                                       |
+| Default Theme                                                          | Fanoni Imaging Theme                                                       |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![Keycloak Default Theme](../assets/img/keycloak-default-theme.png) | ![Keycloak OHIF Theme](../assets/img/keycloak-ohif-theme.png) |
+| ![Keycloak Default Theme](../assets/img/keycloak-default-theme.png) | ![Keycloak Fanoni Imaging Theme](../assets/img/keycloak-ohif-theme.png) |
 
 
 
@@ -518,9 +518,9 @@ members put together:
 [orthanc-docs]: http://book.orthanc-server.com/users/configuration.html#configuration
 [lua-resty-openidc-docs]: https://github.com/zmartzone/lua-resty-openidc
 <!-- SRC -->
-[config]: https://github.com/OHIF/Viewers/blob/master/platform/viewer/src/config.js
-[dockerfile]: https://github.com/OHIF/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/dockerfile
-[config-nginx]: https://github.com/OHIF/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/nginx.conf
-[config-orthanc]: https://github.com/OHIF/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/orthanc.json
-[config-keycloak]: https://github.com/OHIF/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/ohif-keycloak-realm.json
+[config]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/viewer/src/config.js
+[dockerfile]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/dockerfile
+[config-nginx]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/nginx.conf
+[config-orthanc]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/orthanc.json
+[config-keycloak]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/viewer/.recipes/OpenResty-Orthanc-Keycloak/config/ohif-keycloak-realm.json
 <!-- prettier-ignore-end -->

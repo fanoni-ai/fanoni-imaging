@@ -1,29 +1,29 @@
 ---
 sidebar_position: 7
 sidebar_label: iframe
-title: Embedding OHIF in an iframe
-summary: Guidelines for embedding OHIF Viewer within other applications using iframe integration, explaining configuration requirements for path settings, static builds, and proper setup to ensure WebWorkers, WASM, and WebGL features function correctly.
+title: Embedding Fanoni Imaging in an iframe
+summary: Guidelines for embedding Fanoni Imaging within other applications using iframe integration, explaining configuration requirements for path settings, static builds, and proper setup to ensure WebWorkers, WASM, and WebGL features function correctly.
 ---
 
 # iframe
 
-With the transition to more advanced visualization, loading, and rendering techniques using WebWorkers, WASM, and WebGL, the script tag usage of the OHIF viewer v3 has been deprecated.
-An alternative option for script tag usage is to employ an iframe. You can utilize the iframe element to load the OHIF viewer and establish communication with it using the postMessage API if needed.
+With the transition to more advanced visualization, loading, and rendering techniques using WebWorkers, WASM, and WebGL, the script tag usage of Fanoni Imaging viewer v3 has been deprecated.
+An alternative option for script tag usage is to employ an iframe. You can utilize the iframe element to load Fanoni Imaging viewer and establish communication with it using the postMessage API if needed.
 
-We recommend utilizing modern development practices and incorporating OHIF viewer within your application using a more modular and integrated approach, such as leveraging bundlers, other UI
+We recommend utilizing modern development practices and incorporating Fanoni Imaging viewer within your application using a more modular and integrated approach, such as leveraging bundlers, other UI
 components, and frameworks.
 
 ## Static Build
 
-You can use the iframe element to load the OHIF viewer as a child element of your application if you need the
+You can use the iframe element to load Fanoni Imaging viewer as a child element of your application if you need the
 viewer to be embedded within your application. The iframe element can be used as follows (use your own custom styles)
 
 ```html
 <iframe src="./path-to-ohif-build" style="width: 100%; height: 500px; border: none"/>
 ```
 
-The important thing to note here is that the iframe element is loading the OHIF viewer from the `./path-to-ohif-build`. This path can be
-named anything you want, but it should be the path to the OHIF viewer build directory. The build directory is the directory that
+The important thing to note here is that the iframe element is loading Fanoni Imaging viewer from the `./path-to-ohif-build`. This path can be
+named anything you want, but it should be the path to Fanoni Imaging viewer build directory. The build directory is the directory that
 contains the `index.html` file (See [build for production](./build-for-production.md) for more information).
 
 It is also required that the PUBLIC_URL environment variable is set to the same path. For example, if the iframe is

@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: DICOM Metadata Store
 title: DICOM Metadata Store
-summary: Documentation for OHIF's DicomMetadataStore service, which provides centralized storage and retrieval functions for DICOM metadata with hierarchical organization of studies, series, and instances.
+summary: Documentation for Fanoni Imaging's DicomMetadataStore service, which provides centralized storage and retrieval functions for DICOM metadata with hierarchical organization of studies, series, and instances.
 ---
 # DICOM Metadata Store
 

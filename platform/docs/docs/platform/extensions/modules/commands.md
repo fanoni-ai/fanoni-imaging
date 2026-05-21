@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: Commands
 title: Commands Module
-summary: Documentation for OHIF Commands Module, which allows extensions to register functions that can be called by tools, UI components, or hotkeys, with context-specific implementations and flexible command definitions.
+summary: Documentation for Fanoni Imaging Commands Module, which allows extensions to register functions that can be called by tools, UI components, or hotkeys, with context-specific implementations and flexible command definitions.
 ---
 # Module: Commands
 

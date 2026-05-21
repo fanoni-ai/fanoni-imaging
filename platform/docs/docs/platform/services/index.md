@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Introduction
-title: OHIF Services
-summary: Overview of OHIF's services architecture, which provides modular, concern-specific code components that manage state and operations throughout the application, including both data services and UI services that follow a pub/sub pattern to reduce coupling.
+title: Fanoni Imaging Services
+summary: Overview of Fanoni Imaging's services architecture, which provides modular, concern-specific code components that manage state and operations throughout the application, including both data services and UI services that follow a pub/sub pattern to reduce coupling.
 ---
 
 # Services
@@ -202,7 +202,7 @@ The following services is available in the `OHIF-v3`.
 
 <!-- prettier-ignore-start -->
 
-[core-services]: https://github.com/OHIF/Viewers/tree/master/platform/core/src/services
-[services-manager]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/services/ServicesManager.js
+[core-services]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/core/src/services
+[services-manager]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/ServicesManager.js
 [cross-cutting-concerns]: https://en.wikipedia.org/wiki/Cross-cutting_concern
 <!-- prettier-ignore-end -->

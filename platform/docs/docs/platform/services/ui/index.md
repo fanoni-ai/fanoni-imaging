@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: UI Services Overview
-summary: Overview of OHIF's UI services architecture, which enables consistent UI interactions across the application through React context providers and service implementations, allowing extensions to leverage components like modals, notifications, and dialogs.
+summary: Overview of Fanoni Imaging's UI services architecture, which enables consistent UI interactions across the application through React context providers and service implementations, allowing extensions to leverage components like modals, notifications, and dialogs.
 ---
 
 # Overview
@@ -301,6 +301,6 @@ takeaways worth mentioning:
   core application
 
 > Note: These are recommended patterns, not hard and fast rules. Following them
-> will help reduce confusion and interoperability with the larger OHIF
+> will help reduce confusion and interoperability with the larger Fanoni Imaging
 > community, but they're not silver bullets. Please speak up, create an issue,
 > if you would like to discuss new services or improvements to this pattern.

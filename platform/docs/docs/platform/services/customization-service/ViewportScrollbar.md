@@ -1,12 +1,12 @@
 ---
 title: Viewport Scrollbar Customization
-summary: Documentation for configuring OHIF viewport scrollbar behavior, including progress vs legacy mode, loaded/viewed tracking visuals, loading pattern behavior, timing controls, and viewportScrollbar.indicator (size + optional custom indicator).
+summary: Documentation for configuring Fanoni Imaging viewport scrollbar behavior, including progress vs legacy mode, loaded/viewed tracking visuals, loading pattern behavior, timing controls, and viewportScrollbar.indicator (size + optional custom indicator).
 sidebar_position: 7
 ---
 
 # Viewport Scrollbar
 
-The viewport scrollbar customization controls whether OHIF uses:
+The viewport scrollbar customization controls whether Fanoni Imaging uses:
 
 - the new progress-based scrollbar (`viewportScrollbar.variant: 'progress'`), or
 - the legacy range-input scrollbar (`viewportScrollbar.variant: 'legacy'`).

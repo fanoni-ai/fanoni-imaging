@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: DICOMweb
 title: DICOMweb
-summary: Comprehensive guide to configuring DICOMweb data sources in OHIF, including setting up local DICOM servers (Orthanc, DCM4CHEE), configurations for PDF, video, and bulkdata handling, and detailed instructions for development environments.
+summary: Comprehensive guide to configuring DICOMweb data sources in Fanoni Imaging, including setting up local DICOM servers (Orthanc, DCM4CHEE), configurations for PDF, video, and bulkdata handling, and detailed instructions for development environments.
 ---
 
 # DICOMweb
@@ -12,7 +12,7 @@ summary: Comprehensive guide to configuring DICOMweb data sources in OHIF, inclu
 ATTENTION! Already have a remote or local server? Skip to the
 [configuration section](#configuration-learn-more) below.
 
-While the OHIF Viewer can work with any data source, the easiest to configure
+While the Fanoni Imaging can work with any data source, the easiest to configure
 are the ones that follow the [DICOMWeb][dicom-web] spec.
 
 1. Choose and install an Image Archive
@@ -158,12 +158,12 @@ window.config = {
 The following properties can be added to the `configuration` property of each data source.
 
 ##### `dicomUploadEnabled`
-A boolean indicating if the DICOM upload to the data source is permitted/accepted or not. A value of true provides a link on the OHIF work list page that allows for DICOM files from the local file system to be uploaded to the data source
+A boolean indicating if the DICOM upload to the data source is permitted/accepted or not. A value of true provides a link on Fanoni Imaging work list page that allows for DICOM files from the local file system to be uploaded to the data source
 
 :::tip
-The [OHIF plugin for Orthanc](https://book.orthanc-server.com/plugins/ohif.html) by default utilizes the DICOM JSON data
+The [Fanoni Imaging plugin for Orthanc](https://book.orthanc-server.com/plugins/ohif.html) by default utilizes the DICOM JSON data
 source and it has been discovered that only those studies uploaded to Orthanc AFTER the plugin has been installed are
-available as DICOM JSON. As such, if the OHIF plugin for Orthanc is desired for studies uploaded prior to installing the plugin,
+available as DICOM JSON. As such, if Fanoni Imaging plugin for Orthanc is desired for studies uploaded prior to installing the plugin,
 then consider switching to using [DICOMweb instead](https://book.orthanc-server.com/plugins/ohif.html#using-dicomweb).
 :::
 
@@ -184,7 +184,7 @@ A comma delimited string specifying which payloads the data source responds with
 
 For DICOM video and PDF it has been found that Orthanc delivers multipart, while DCM4CHEE delivers single part. Consult the DICOM conformance statement for your particular data source to determine which payload types it delivers.
 
-To learn more about how you can configure the OHIF Viewer, check out our
+To learn more about how you can configure the Fanoni Imaging, check out our
 [Configuration Guide](../configurationFiles.md).
 
 
@@ -230,7 +230,7 @@ about dcm4chee in their website [here](https://www.dcm4che.org/)
 DCM4chee installation is out of scope for these tutorials and can be found
 [here](https://github.com/dcm4che/dcm4chee-arc-light/wiki/Run-minimum-set-of-archive-services-on-a-single-host)
 
-An overview of steps for running OHIF Viewer using a local DCM4CHEE is shown
+An overview of steps for running Fanoni Imaging using a local DCM4CHEE is shown
 below:
 
 <div style={{padding:"56.25% 0 0 0", position:"relative"}}>
@@ -247,10 +247,10 @@ below:
 [osirix]: http://www.osirix-viewer.com/
 [horos]: https://www.horosproject.org/
 [default-config]:
-  https://github.com/OHIF/Viewers/blob/master/platform/app/public/config/default.js
+  https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/public/config/default.js
 [html-templates]:
-  https://github.com/OHIF/Viewers/tree/master/platform/app/public/html-templates
+  https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/html-templates
 [config-files]:
-  https://github.com/OHIF/Viewers/tree/master/platform/app/public/config
+  https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/config
 [storescu]: http://support.dcmtk.org/docs/storescu.html
 [webpack-proxy]: https://webpack.js.org/configuration/dev-server/#devserverproxy

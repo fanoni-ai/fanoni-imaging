@@ -2,7 +2,7 @@
 sidebar_position: 3
 sidebar_label: UI Modal Service
 title: UI Modal Service
-summary: Documentation for OHIF's UI Modal Service, which enables displaying centered, non-draggable modal windows for focused user interaction, with support for custom components and content throughout the application.
+summary: Documentation for Fanoni Imaging's UI Modal Service, which enables displaying centered, non-draggable modal windows for focused user interaction, with support for custom components and content throughout the application.
 ---
 # UI Modal Service
 
@@ -44,7 +44,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 
 
 ### Custom Component
-If you would like to customize the modal component that OHIF uses, you can register your own
+If you would like to customize the modal component that Fanoni Imaging uses, you can register your own
 component with the `customComponent` property.
 
 ```js
@@ -59,8 +59,8 @@ setServiceImplementation({customComponent: Modal})
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/services/UIModalService/index.js
-[modal-provider]: https://github.com/OHIF/Viewers/blob/master/platform/ui/src/contextProviders/ModalProvider.js
-[modal-consumer]: https://github.com/OHIF/Viewers/tree/master/platform/ui/src/components/ohifModal
+[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UIModalService/index.js
+[modal-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/ModalProvider.js
+[modal-consumer]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/ui/src/components/ohifModal
 [ux-article]: https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c
 <!-- prettier-ignore-end -->

@@ -2,7 +2,7 @@
 sidebar_position: 3
 sidebar_label: DisplaySet Service
 title: DisplaySet Service
-summary: Documentation for OHIF's DisplaySetService, which converts instance metadata into displayable sets for visualization, allowing dynamic creation, updating, and management of display sets from various data sources.
+summary: Documentation for Fanoni Imaging's DisplaySetService, which converts instance metadata into displayable sets for visualization, allowing dynamic creation, updating, and management of display sets from various data sources.
 ---
 # DisplaySet Service
 
@@ -32,7 +32,7 @@ NOTE: Any instances not matched are NOT added to any display set and will not be
 
 :::::info[Clarification of Terminology]
 
-Display Sets, which are custom to OHIF, are often confused with different DICOM terms, including study, series, and instances. The following are definitions for these terms to alleviate confusion.
+Display Sets, which are custom to Fanoni Imaging, are often confused with different DICOM terms, including study, series, and instances. The following are definitions for these terms to alleviate confusion.
 <br></br>
 
 DICOM Terms:

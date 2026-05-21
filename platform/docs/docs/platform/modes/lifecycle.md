@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: Lifecycle Hooks
 title: Mode Lifecycle Hooks
-summary: Documentation for OHIF Mode's lifecycle hooks (onModeInit, onModeEnter, and onModeExit), which allow customization of initialization, resource setup, and cleanup when entering or exiting viewer modes.
+summary: Documentation for Fanoni Imaging Mode's lifecycle hooks (onModeInit, onModeEnter, and onModeExit), which allow customization of initialization, resource setup, and cleanup when entering or exiting viewer modes.
 ---
 
 # Modes: Lifecycle Hooks
@@ -39,7 +39,7 @@ buttons to the toolbar.
 
 :::note Tip
 
-In OHIF Version 3.1, there is a new service `ToolGroupService` that is used to
+In Fanoni Imaging Version 3.1, there is a new service `ToolGroupService` that is used to
 define and manage tools for the group of viewports. This is a new concept
 borrowed from the Cornerstone ToolGroup, and you can read more
 [here](https://www.cornerstonejs.org/docs/concepts/cornerstone-tools/toolgroups/)

@@ -2,14 +2,14 @@
 sidebar_position: 8
 sidebar_label: Hanging Protocol
 title: Hanging Protocol Module
-summary: Documentation for OHIF Hanging Protocol Module, which controls image arrangement in viewports based on matching rules, with capabilities for layout configuration, viewport settings, synchronization, and advanced study comparison workflows.
+summary: Documentation for Fanoni Imaging Hanging Protocol Module, which controls image arrangement in viewports based on matching rules, with capabilities for layout configuration, viewport settings, synchronization, and advanced study comparison workflows.
 ---
 # Module: Hanging Protocol
 
 ## Overview
 
 [Hanging protocols](http://dicom.nema.org/dicom/Conf-2005/Day-2_Selected_Papers/B305_Morgan_HangProto_v1.pdf) are an essential part of any radiology viewer.
-OHIF uses Hanging Protocols to handle the arrangement of the images in the viewport. In
+Fanoni Imaging uses Hanging Protocols to handle the arrangement of the images in the viewport. In
 short, the registered protocols will get matched with the DisplaySets that are
 available. Each protocol gets a score, and they are ranked. The
 winning protocol (highest score) gets applied and its settings run for the viewports
@@ -25,7 +25,7 @@ In `OHIF-v3` hanging protocols you can:
 - Add specific synchronization rules for the viewports (e.g., synchronize the zoom of the viewports of the index 1, 2 OR synchronize the VOI of the viewports of the index 2, 3)
 
 
-Using `hangingProtocolModule` you can provide/register the protocols for OHIF to
+Using `hangingProtocolModule` you can provide/register the protocols for Fanoni Imaging to
 utilize.
 
 Here is an example protocol which if used will hang a 1x3 layout with the first viewport showing a CT image, the second viewport showing a PT image and the third viewport showing their fusion, all in Sagittal orientations to achieve a view of
@@ -215,7 +215,7 @@ The skeleton of a hanging protocol is as follows:
 ### Id
 unique identifier for the protocol, this id can be used inside mode configuration
 to specify which protocol should be used for a specific mode. A mode can
-request a protocol by its id (which makes OHIF to apply the protocol without
+request a protocol by its id (which makes Fanoni Imaging to apply the protocol without
 matching), or provides an array of ids which will
 make the ProtocolEngine to choose the best matching protocol (based on
 protocolMatching rules, which is next section).
@@ -286,7 +286,7 @@ A list of criteria for the protocol along with the provided points for ranking.
 ### `from` attribute (optional)
 The `from` attribute allows you to retrieve the attribute to test from another object, such as the previous study, the overall list of studies, or another provided value from a module.
 
-The values provided by OHIF which you can use are:
+The values provided by Fanoni Imaging which you can use are:
 
 -  `activeStudy`: to use the metadata of the active study to match
 -  `studies`: to use the metadata of the list of studies (all studies) to match
@@ -500,10 +500,10 @@ HangingProtocolService.addCustomAttribute(
 
 Often it is desired to match a new study to a prior study (e.g., follow up on
 a surgery). Since the hanging protocols run on displaySets we need to have a
-way to let OHIF knows that it needs to load the prior study as well. This can
+way to let Fanoni Imaging knows that it needs to load the prior study as well. This can
 be done by specifying both StudyInstanceUIDs in the URL. The additional studies
 are then accessible to the hanging protocol.  Below we are
-running OHIF with two studies, and a comparison hanging protocol available by
+running Fanoni Imaging with two studies, and a comparison hanging protocol available by
 default.
 
 ```bash

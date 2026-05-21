@@ -2,13 +2,13 @@
 sidebar_position: 5
 sidebar_label: Static Files
 title: Static DICOMweb Files
-summary: Details how to use the static-wado project to generate and serve optimized static DICOMweb files for enhanced OHIF Viewer performance, with step-by-step instructions for installation, file generation, and viewer configuration.
+summary: Details how to use the static-wado project to generate and serve optimized static DICOMweb files for enhanced Fanoni Imaging performance, with step-by-step instructions for installation, file generation, and viewer configuration.
 ---
 
 
 # Static DICOMweb Files for Enhanced Performance
 
-This section describes how to generate and serve static DICOMweb files, significantly improving the performance of your OHIF Viewer setup. These files are pre-processed and compressed, minimizing storage space and reducing serving time to the bare minimum (disk read and HTTP stream write).
+This section describes how to generate and serve static DICOMweb files, significantly improving the performance of your Fanoni Imaging setup. These files are pre-processed and compressed, minimizing storage space and reducing serving time to the bare minimum (disk read and HTTP stream write).
 
 ## Static-DICOMWeb Project
 
@@ -76,11 +76,11 @@ This project contains two main components:
     The `-p` (port) and `-o` (output directory) flags are used to configure the server.
     :::
 
-## Running OHIF Viewer with Static Data
+## Running Fanoni Imaging with Static Data
 
 1. **Use the `local_static.js` Configuration:**
 
-    Start the OHIF Viewer in development mode using the provided `local_static.js` configuration file:
+    Start the Fanoni Imaging in development mode using the provided `local_static.js` configuration file:
 
     ```bash
     yarn dev:static
@@ -98,5 +98,5 @@ This project contains two main components:
     This matches the default port (3001) used by the `static-wado-webserver`.
 
     :::info
-    If you change the port or output directory when running the `static-wado-webserver`, you **must** also update the `qidoRoot` and `wadoRoot` values in your `local_static.js` configuration file accordingly to ensure the OHIF Viewer can access the data.
+    If you change the port or output directory when running the `static-wado-webserver`, you **must** also update the `qidoRoot` and `wadoRoot` values in your `local_static.js` configuration file accordingly to ensure the Fanoni Imaging can access the data.
     :::

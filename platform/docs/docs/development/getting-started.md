@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Getting Started
-title: Getting Started with OHIF Development
-summary: Quick start guide for OHIF development, covering repository setup options, branch organization, development environment requirements, project initialization, and steps for building production-ready assets.
+title: Getting Started with Fanoni Imaging Development
+summary: Quick start guide for Fanoni Imaging development, covering repository setup options, branch organization, development environment requirements, project initialization, and steps for building production-ready assets.
 ---
 
 # Getting Started
@@ -12,12 +12,12 @@ summary: Quick start guide for OHIF development, covering repository setup optio
 ### Fork & Clone
 
 If you intend to contribute back changes, or if you would like to pull updates
-we make to the OHIF Viewer, then follow these steps:
+we make to the Fanoni Imaging, then follow these steps:
 
-- [Fork][fork-a-repo] the [OHIF/Viewers][ohif-viewers-repo] repository
+- [Fork][fork-a-repo] the [Fanoni Imaging/Viewers][ohif-viewers-repo] repository
 - [Create a local clone][clone-a-repo] of your fork
   - `git clone https://github.com/YOUR-USERNAME/Viewers`
-- Add OHIF/Viewers as a [remote repository][add-remote-repo] labeled `upstream`
+- Add Fanoni Imaging/Viewers as a [remote repository][add-remote-repo] labeled `upstream`
   - Navigate to the cloned project's directory
   - `git remote add upstream https://github.com/OHIF/Viewers.git`
 
@@ -29,10 +29,10 @@ graphic that illustrates this setup][triangular-workflow].
 
 ### Private
 
-Alternatively, if you intend to use the OHIF Viewer as a starting point, and you
+Alternatively, if you intend to use the Fanoni Imaging as a starting point, and you
 aren't as concerned with syncing updates, then follow these steps:
 
-1. Navigate to the [OHIF/Viewers][ohif-viewers] repository
+1. Navigate to the [Fanoni Imaging/Viewers][ohif-viewers] repository
 2. Click `Clone or download`, and then `Download ZIP`
 3. Use the contents of the `.zip` file as a starting point for your viewer
 
@@ -121,7 +121,7 @@ yarn run build
 
 ### Updating Dependencies
 In general you will typically not be updating the various `package.json` files.
-But for the case when you do, you will have to also update the various OHIF lock files
+But for the case when you do, you will have to also update the various Fanoni Imaging lock files
 and as such you will have to do both a `yarn` and `bun` `install` without
 the `--frozen-lockfile` flag.
 
@@ -161,6 +161,6 @@ do NOT commit or push your changes! Low and moderate risk vulnerabilities are ac
 [add-remote-repo]: https://help.github.com/en/articles/fork-a-repo#step-3-configure-git-to-sync-your-fork-with-the-original-spoon-knife-repository
 [sync-changes]: https://help.github.com/en/articles/syncing-a-fork
 [triangular-workflow]: https://github.blog/2015-07-29-git-2-5-including-multiple-worktrees-and-triangular-workflows/#improved-support-for-triangular-workflows
-[ohif-viewers-repo]: https://github.com/OHIF/Viewers/
-[ohif-viewers]: https://github.com/OHIF/Viewers
+[ohif-viewers-repo]: https://github.com/Fanoni Imaging/Viewers/
+[ohif-viewers]: https://github.com/Fanoni Imaging/Viewers
 <!-- prettier-ignore-end -->

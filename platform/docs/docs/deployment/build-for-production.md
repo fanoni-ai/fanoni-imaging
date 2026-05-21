@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Build for Production
-summary: Step-by-step guide to building a production-ready version of the OHIF Viewer, including environment setup, code acquisition, dependency restoration, production build creation, and configuration options for deployment.
+summary: Step-by-step guide to building a production-ready version of the Fanoni Imaging, including environment setup, code acquisition, dependency restoration, production build creation, and configuration options for deployment.
 ---
 
 # Build for Production
@@ -26,7 +26,7 @@ More on: _[`git clone`](https://git-scm.com/docs/git-clone),
 
 _From .zip:_
 
-[OHIF/Viewers: master.zip](https://github.com/OHIF/Viewers/archive/master.zip)
+[Fanoni Imaging/Viewers: master.zip](https://github.com/Fanoni Imaging/Viewers/archive/master.zip)
 
 ### Restore Dependencies & Build
 
@@ -57,8 +57,8 @@ If everything worked as expected, you should have a new `dist/` directory in the
 └── ...
 ```
 
-By default, the build output will connect to OHIF's publicly accessible PACS. If
-this is your first time setting up the OHIF Viewer, it is recommended that you
+By default, the build output will connect to Fanoni Imaging's publicly accessible PACS. If
+this is your first time setting up the Fanoni Imaging, it is recommended that you
 test with these default settings. After testing, you can find instructions on
 how to configure the project for your own imaging archive below.
 
@@ -124,9 +124,9 @@ web application. For a starting point, check out this repository's own use of:
   [build-deploy-preview.sh][build-deploy-preview.sh]
 
 <!-- prettier-ignore-start -->
-[circleci]: https://circleci.com/gh/OHIF/Viewers
-[circleci-config]: https://github.com/OHIF/Viewers/blob/master/.circleci/config.yml
+[circleci]: https://circleci.com/gh/Fanoni Imaging/Viewers
+[circleci-config]: https://github.com/Fanoni Imaging/Viewers/blob/master/.circleci/config.yml
 [netlify]: https://app.netlify.com/sites/ohif/deploys
-[netlify.toml]: https://github.com/OHIF/Viewers/blob/master/platform/app/netlify.toml
-[build-deploy-preview.sh]: https://github.com/OHIF/Viewers/blob/master/.netlify/build-deploy-preview.sh
+[netlify.toml]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/netlify.toml
+[build-deploy-preview.sh]: https://github.com/Fanoni Imaging/Viewers/blob/master/.netlify/build-deploy-preview.sh
 <!-- prettier-ignore-end -->

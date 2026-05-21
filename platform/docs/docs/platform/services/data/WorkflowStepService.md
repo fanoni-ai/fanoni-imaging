@@ -2,7 +2,7 @@
 sidebar_position: 9
 sidebar_label: WorkflowStep Service
 title: WorkflowStep Service
-summary: Documentation for OHIF's WorkflowStepService, which enables structured multi-step clinical workflows with customizable hanging protocols, layouts, and toolbars for each step, providing guided navigation through complex imaging tasks.
+summary: Documentation for Fanoni Imaging's WorkflowStepService, which enables structured multi-step clinical workflows with customizable hanging protocols, layouts, and toolbars for each step, providing guided navigation through complex imaging tasks.
 ---
 
 # Workflow Step Service

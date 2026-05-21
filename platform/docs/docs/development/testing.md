@@ -1,13 +1,13 @@
 ---
 sidebar_position: 7
 sidebar_label: Testing
-title: Testing OHIF
-summary: Comprehensive guide to OHIF's testing approach, covering unit tests and end-to-end tests with detailed instructions for running them, explanation of test data management, and an overview of the project's testing philosophy and best practices.
+title: Testing Fanoni Imaging
+summary: Comprehensive guide to Fanoni Imaging's testing approach, covering unit tests and end-to-end tests with detailed instructions for running them, explanation of test data management, and an overview of the project's testing philosophy and best practices.
 ---
 
-# Running Tests for OHIF
+# Running Tests for Fanoni Imaging
 
-We introduce here various test types that is available for OHIF, and how to run
+We introduce here various test types that is available for Fanoni Imaging, and how to run
 each test in order to make sure your contribution hasn't broken any existing
 functionalities. Idea and philosophy of each testing category is discussed in
 the second part of this page.
@@ -26,9 +26,9 @@ Running unit test will generate a report at the end showing the successful and
 unsuccessful tests with detailed explanations.
 
 ## End-to-end test
-For running the OHIF e2e test you need to run the following steps:
+For running Fanoni Imaging e2e test you need to run the following steps:
 
-- Open a new terminal, and from the root of the OHIF mono repo, run the following command:
+- Open a new terminal, and from the root of Fanoni Imaging mono repo, run the following command:
 
   ```bash
   yarn test:data
@@ -46,9 +46,9 @@ For running the OHIF e2e test you need to run the following steps:
 
   You should be able to see test studies in the study list
 
-  ![OHIF-e2e-test-studies](../assets/img/OHIF-e2e-test-studies.png)
+  ![Fanoni Imaging-e2e-test-studies](../assets/img/Fanoni Imaging-e2e-test-studies.png)
 
-- Open a new terminal inside the OHIF project, and run the e2e cypress test
+- Open a new terminal inside Fanoni Imaging project, and run the e2e cypress test
 
   ```bash
   yarn test:e2e
@@ -66,10 +66,10 @@ For running the OHIF e2e test you need to run the following steps:
   ![e2e-cypress-final](../assets/img/e2e-cypress-final.png)
 
   ## Test Data
-  The testing data is stored in two OHIF repositories.  The first contains the
-  binary DICOM data, at [viewer-testdata](https://github.com/OHIF/viewer-testdata.git)
+  The testing data is stored in two Fanoni Imaging repositories.  The first contains the
+  binary DICOM data, at [viewer-testdata](https://github.com/Fanoni Imaging/viewer-testdata.git)
   while the second module contains data in the DICOMweb format, installed as a submodule
-  into OHIF in the `testdata` directory.  This is retrieved via the command
+  into Fanoni Imaging in the `testdata` directory.  This is retrieved via the command
   ```bash
   yarn test:data
   ```
@@ -80,7 +80,7 @@ For running the OHIF e2e test you need to run the following steps:
   mkdicomweb -d dicomweb dcm
   ```
   to update the local dicomweb submodule in viewer-testdata.  Then, commit
-  that data and update the submodules used in OHIF and in the viewer-testdata
+  that data and update the submodules used in Fanoni Imaging and in the viewer-testdata
   parent modules.
 
   All data MUST be fully anonymized and allowed to be used for open access.
@@ -201,7 +201,7 @@ feature `X` or scenario `Y`? Open an issue and let's discuss.
 
 <!-- prettier-ignore-start -->
 [eslint-rules]: https://eslint.org/docs/rules/
-[mini-pacs]: https://github.com/OHIF/viewer-testdata
+[mini-pacs]: https://github.com/Fanoni Imaging/viewer-testdata
 [typescript-docs]: https://www.typescriptlang.org/docs/home.html
 [flow-org]: https://flow.org/
 <!-- Talks -->

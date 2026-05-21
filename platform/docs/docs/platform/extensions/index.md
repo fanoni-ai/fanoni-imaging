@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Introduction
-title: OHIF Extensions Introduction
-summary: Comprehensive introduction to the OHIF viewer extension system, explaining how extensions provide modular functionality through different module types, and how they're configured and accessed in modes to build customized viewer experiences.
+title: Fanoni Imaging Extensions Introduction
+summary: Comprehensive introduction to Fanoni Imaging viewer extension system, explaining how extensions provide modular functionality through different module types, and how they're configured and accessed in modes to build customized viewer experiences.
 ---
 
 # Introduction
@@ -71,10 +71,10 @@ export default {
 }
 ```
 
-## OHIF-Maintained Extensions
+## Fanoni Imaging-Maintained Extensions
 
 A small number of powerful extensions for popular use cases are maintained by
-OHIF. They're co-located in the [`OHIF/Viewers`][viewers-repo] repository, in
+Fanoni Imaging. They're co-located in the [`OHIF/Viewers`][viewers-repo] repository, in
 the top level [`extensions/`][ext-source] directory.
 
 <table>
@@ -114,7 +114,7 @@ the top level [`extensions/`][ext-source] directory.
                 <a href="">dicom-pdf</a>
             </td>
             <td>
-                Renders PDFs for a <a href="https://github.com/OHIF/Viewers/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6">specific SopClassUID</a>.
+                Renders PDFs for a <a href="https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6">specific SopClassUID</a>.
             </td>
             <td>Viewport, SopClassHandler</td>
         </tr>
@@ -246,7 +246,7 @@ differently.
           DataSource
         </a>
       </td>
-      <td align="left">Control the mapping from DICOM metadata to OHIF-metadata</td>
+      <td align="left">Control the mapping from DICOM metadata to Fanoni Imaging-metadata</td>
     </tr>
     <tr>
       <td align="left">
@@ -341,7 +341,7 @@ are used to determine the appropriate implementation of the rotation behavior.
 -->
 
 <!-- prettier-ignore-start -->
-[viewers-repo]: https://github.com/OHIF/Viewers
-[ext-source]: https://github.com/OHIF/Viewers/tree/master/extensions
-[module-types]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/extensions/MODULE_TYPES.js
+[viewers-repo]: https://github.com/Fanoni Imaging/Viewers
+[ext-source]: https://github.com/Fanoni Imaging/Viewers/tree/master/extensions
+[module-types]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/extensions/MODULE_TYPES.js
 <!-- prettier-ignore-end -->

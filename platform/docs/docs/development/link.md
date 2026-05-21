@@ -2,7 +2,7 @@
 sidebar_position: 9
 sidebar_label: Local Linking
 title: Local Library Linking
-summary: Brief introduction to the concept of local linking for library development in OHIF, explaining how to test libraries in application context before publishing, with reference to Cornerstonejs linking documentation.
+summary: Brief introduction to the concept of local linking for library development in Fanoni Imaging, explaining how to test libraries in application context before publishing, with reference to Cornerstonejs linking documentation.
 ---
 
 # Introduction
@@ -34,7 +34,7 @@ bun link
 bun dev
 ```
 
-In OHIF, edit the root `package.json` file to include the cornerstone3D packages to link and add them to the `resolutions`.
+In Fanoni Imaging, edit the root `package.json` file to include the cornerstone3D packages to link and add them to the `resolutions`.
 
 For example here is a snippet of the `package.json` file linking cornerstone core and tools locally. Add whichever
 cornerstone packages to link locally in the `resolutions`.
@@ -51,7 +51,7 @@ cornerstone packages to link locally in the `resolutions`.
   ...
 ```
 
-In OHIF, run `bun install -f --config=.\bunfig.update-lockfile.toml` and then run OHIF using either `bun dev` or `bun dev:fast`.
+In Fanoni Imaging, run `bun install -f --config=.\bunfig.update-lockfile.toml` and then run Fanoni Imaging using either `bun dev` or `bun dev:fast`.
 
 ### Linking dicom-microscopy-viewer
 
@@ -63,7 +63,7 @@ bun unlink
 bun link
 bun webpack:dynamic-import:watch
 ```
-In OHIF, edit the root `package.json` file to include the dicom-microscopy-viewer package in the `resolutions`. The following is an example of this...
+In Fanoni Imaging, edit the root `package.json` file to include the dicom-microscopy-viewer package in the `resolutions`. The following is an example of this...
 
 ```
   ...
@@ -76,4 +76,4 @@ In OHIF, edit the root `package.json` file to include the dicom-microscopy-viewe
   ...
 ```
 
-In OHIF, run `bun install -f --config=.\bunfig.update-lockfile.toml` and then run OHIF using either `bun dev` or `bun dev:fast`.
+In Fanoni Imaging, run `bun install -f --config=.\bunfig.update-lockfile.toml` and then run Fanoni Imaging using either `bun dev` or `bun dev:fast`.

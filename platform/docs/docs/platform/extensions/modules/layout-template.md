@@ -2,7 +2,7 @@
 sidebar_position: 7
 sidebar_label: Layout Template
 title: Layout Template Module
-summary: Documentation for OHIF Layout Template Module, which defines the structural organization of the viewer interface, controlling toolbar positioning, panel arrangement, and viewport grid placement through React components.
+summary: Documentation for Fanoni Imaging Layout Template Module, which defines the structural organization of the viewer interface, controlling toolbar positioning, panel arrangement, and viewport grid placement through React components.
 ---
 
 # Module: Layout Template
@@ -32,7 +32,7 @@ const getLayoutTemplateModule = (/* ... */) => [
 ```
 
 The `props` that are passed to `layoutTemplate` are managers and service, along
-with the defined mode left/right panels, mode's defined viewports and OHIF
+with the defined mode left/right panels, mode's defined viewports and Fanoni Imaging
 `ViewportGridComp`. LayoutTemplate leverages extensionManager to grab typed
 extension module entries: `*.getModuleEntry(id)`
 

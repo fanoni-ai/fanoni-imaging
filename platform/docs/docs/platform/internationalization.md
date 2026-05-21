@@ -2,12 +2,12 @@
 sidebar_position: 4
 sidebar_label: Internationalization
 title: Internationalization
-summary: Documentation of OHIF's internationalization (i18n) implementation, including how to change languages, extend existing languages, add new languages, and contribute translations, using the @ohif/i18n package powered by i18next.
+summary: Documentation of Fanoni Imaging's internationalization (i18n) implementation, including how to change languages, extend existing languages, add new languages, and contribute translations, using the @ohif/i18n package powered by i18next.
 ---
 
 # Viewer: Internationalization
 
-OHIF supports internationalization using [i18next](https://www.i18next.com/)
+Fanoni Imaging supports internationalization using [i18next](https://www.i18next.com/)
 through the npm package [@ohif/i18n](https://www.npmjs.com/package/@ohif/i18n),
 where is the main instance of i18n containing several languages and tools.
 
@@ -94,15 +94,15 @@ function MyComponent() {
 }
 ```
 
-### Using outside of OHIF viewer
+### Using outside of Fanoni Imaging viewer
 
-OHIF Viewer already sets a main
+Fanoni Imaging already sets a main
 [I18nextProvider](https://react.i18next.com/latest/i18nextprovider) connected to
-the shared i18n instance from `@ohif/i18n`, all extensions inside OHIF Viewer
+the shared i18n instance from `@ohif/i18n`, all extensions inside Fanoni Imaging
 will share this same provider at the end, you don't need to set new providers at
 all.
 
-But, if you need to use it completely outside of OHIF viewer, you can set the
+But, if you need to use it completely outside of Fanoni Imaging viewer, you can set the
 I18nextProvider this way:
 
 ```jsx
@@ -146,7 +146,7 @@ becomes a new namespace automatically.
 - Buttons: All buttons translations
 - CineDialog: Translations for the tool tips inside the Cine Player Dialog
 - Common: all common jargons that can be reused like `t('$t(common:image)')`
-- Header: translations related to OHIF's Header Top Bar
+- Header: translations related to Fanoni Imaging's Header Top Bar
 - MeasurementTable - Translations for the `@ohif/ui` Measurement Table
 - UserPreferencesModal - Translations for the `@ohif/ui` Preferences Modal
 - Modals - Translations available for other modals
@@ -299,7 +299,7 @@ detector config as parameter.
 
 ### Changing the language
 
-OHIF Viewer accepts a query param called `lng` in the url to change the
+Fanoni Imaging accepts a query param called `lng` in the url to change the
 language.
 
 E.g.
@@ -328,7 +328,7 @@ REACT_APP_I18N_DEBUG=true yarn run dev
 
 ## Contributing with new languages
 
-We have integrated `i18next` into the OHIF Viewer and hooked it up with Locize
+We have integrated `i18next` into the Fanoni Imaging and hooked it up with Locize
 for translation management. Now we need your help to get the app translated into
 as many languages as possible, and ensure that we haven't missed pieces of the
 app that need translation. Locize has graciously offered to provide us with free
@@ -336,7 +336,7 @@ usage of their product.
 
 Once each crowd-sourcing project is completed, we can approve it and merge the
 changes into the main project. At that point, the language will be immediately
-available on https://viewer.ohif.org/ for testing, and can be used in any OHIF
+available on https://imaging.fanoni.ai for testing, and can be used in any Fanoni Imaging
 project. We will support usage through both the Locize CDN and by copying the
 language directly into the `@ohif/i18n` package, so that end users can serve the
 content from their own domains.
@@ -344,13 +344,13 @@ content from their own domains.
 Here are a couple examples:
 
 Spanish:
-https://viewer.ohif.org/viewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=es
+https://imaging.fanoni.aiviewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=es
 
 Chinese:
-https://viewer.ohif.org/viewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=zh
+https://imaging.fanoni.aiviewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=zh
 
 Portuguese:
-https://viewer.ohif.org/viewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=pt-BR
+https://imaging.fanoni.aiviewer/1.2.840.113619.2.5.1762583153.215519.978957063.78?lng=pt-BR
 
 Here are some links you can use to sign up to help translate. All you have to do
 is sign up, translate the strings, and click Save. On our side, we have a
@@ -394,5 +394,5 @@ Languages:
 [Portugese-Brazil](https://www.locize.io/register?invitation=Qc5Dq449xbblQqLTpWeMfsyFiu3gACcgpj0EIucQjjs9Ph9pzPLpq3MnZupF9t6N)
 
 Don't see your language in the above list? Add a request
-[here](https://github.com/OHIF/Viewers/issues/618) so that we can create the
+[here](https://github.com/Fanoni Imaging/Viewers/issues/618) so that we can create the
 language for your translation contribution.

@@ -2,15 +2,15 @@
 sidebar_position: 10
 sidebar_label: CS3D Integration Testing
 title: Cornerstone3D Integration Testing
-summary: How to test OHIF against specific Cornerstone3D branches or versions, both locally and in CI.
+summary: How to test Fanoni Imaging against specific Cornerstone3D branches or versions, both locally and in CI.
 ---
 
 # Cornerstone3D Integration Testing
 
-OHIF can be tested against a specific Cornerstone3D (CS3D) branch or published version.
+Fanoni Imaging can be tested against a specific Cornerstone3D (CS3D) branch or published version.
 This is useful for:
 
-- Validating OHIF changes against unreleased CS3D features
+- Validating Fanoni Imaging changes against unreleased CS3D features
 - Upgrading CS3D versions with automated testing
 - Debugging issues that span both repositories
 
@@ -56,7 +56,7 @@ Use **Actions > Playwright Tests > Run workflow** and set the `cs3d_ref` input:
 ### Branch vs Version Behavior
 
 **Version path** (e.g., `4.x`, `4.18.2`):
-- Installs OHIF dependencies normally
+- Installs Fanoni Imaging dependencies normally
 - Updates all `@cornerstonejs/*` versions in workspace package.json files
 - Re-installs to fetch the specified versions from npm
 - Runs all tests
@@ -66,7 +66,7 @@ Use **Actions > Playwright Tests > Run workflow** and set the `cs3d_ref` input:
 **Branch path** (e.g., `main`, `myorg:feat/foo`):
 - Clones CS3D into `libs/@cornerstonejs`
 - Builds CS3D from source (`build:esm`)
-- Links built packages into OHIF's `node_modules`
+- Links built packages into Fanoni Imaging's `node_modules`
 - Runs all tests
 - Builds and deploys a Netlify preview
 - **Intentionally fails** at the end to prevent merging — re-run with a published version before merge
@@ -85,7 +85,7 @@ recorded in workflow annotations (`::notice::` messages). To apply the version u
 ### Setting Up a CS3D Worktree
 
 For local development, use the CS3D repo's `link:cs3d` script to create a git worktree.
-This shares a single git repository across multiple OHIF checkouts:
+This shares a single git repository across multiple Fanoni Imaging checkouts:
 
 ```bash
 # From your cornerstone3D repo:

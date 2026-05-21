@@ -1,13 +1,13 @@
 ---
 sidebar_position: 3
 sidebar_label: Tours
-title: Configuring Tours in OHIF
-summary: Guide to implementing interactive guided tours in OHIF using Shepherd.js, including detailed configuration options, step definitions, customization parameters, and examples for creating effective user onboarding experiences.
+title: Configuring Tours in Fanoni Imaging
+summary: Guide to implementing interactive guided tours in Fanoni Imaging using Shepherd.js, including detailed configuration options, step definitions, customization parameters, and examples for creating effective user onboarding experiences.
 ---
 
-# Configuring Tours in OHIF with Shepherd.js
+# Configuring Tours in Fanoni Imaging with Shepherd.js
 
-In OHIF, you can configure guided tours for users by leveraging [Shepherd.js](https://shepherdjs.dev/), a JavaScript library for building feature tours. This page explains how you can define and customize these tours within your app configuration file.
+In Fanoni Imaging, you can configure guided tours for users by leveraging [Shepherd.js](https://shepherdjs.dev/), a JavaScript library for building feature tours. This page explains how you can define and customize these tours within your app configuration file.
 
 ## Overview
 
@@ -71,7 +71,7 @@ Each step defines a part of the tour. Here's a breakdown of the properties you c
   - `on`: Specifies the position of the tooltip relative to the element (e.g., 'top', 'left', 'bottom', 'right').
 - **`advanceOn`**: Defines an event that will automatically advance the tour to the next step. This is useful for actions like clicking a button or scrolling.
   - `selector`: The CSS selector for the element that triggers the advance.
-  - `event`: The event name that advances the step, this can be a OHIF service event, or a cornerstone event, or any native JS event (e.g., 'click', 'CORNERSTONE_TOOLS_MOUSE_WHEEL').
+  - `event`: The event name that advances the step, this can be a Fanoni Imaging service event, or a cornerstone event, or any native JS event (e.g., 'click', 'CORNERSTONE_TOOLS_MOUSE_WHEEL').
 - **`beforeShowPromise`**: A function that returns a promise. When the promise resolves, the rest of the show logic for the step will execute. You can use this to ensure that the target element is ready before the step shows.
 
 ### `tourOptions`

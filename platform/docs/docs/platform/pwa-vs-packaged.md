@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: PWA vs Packaged Application
-summary: Explanation of OHIF's primary build process for Progressive Web Applications (PWAs), detailing how the application is built as a set of static assets with service worker support for enhanced performance across devices and network conditions.
+summary: Explanation of Fanoni Imaging's primary build process for Progressive Web Applications (PWAs), detailing how the application is built as a set of static assets with service worker support for enhanced performance across devices and network conditions.
 ---
 
 # PWA vs Packaged
 
-It's important to know that the OHIF Viewer project provides two different build
+It's important to know that the Fanoni Imaging project provides two different build
 processes:
 
 ```bash
@@ -21,7 +21,7 @@ yarn run build
 > provide a reliable, fast, and engaging experience across different devices and
 > network conditions.
 
-The OHIF Viewer is maintained as a [monorepo][monorepo]. We use WebPack to build
+The Fanoni Imaging is maintained as a [monorepo][monorepo]. We use WebPack to build
 the many small static assets that comprise our application. Also generated is an
 `index.html` that will serve as an entry point for loading configuration and the
 application, as well as a `service-worker` that can intelligently cache files so

@@ -66,4 +66,4 @@ If parameters with the same key exist in both the query string and hash fragment
 - The parameters from the hash are added to the search parameters, overriding any duplicate keys.
 - If the `lowerCaseKeys` option is enabled, it creates a new URLSearchParams object with all keys converted to lowercase.
 
-This is particularly useful in OHIF where parameters may be specified in either the query string or hash fragment, and where case-sensitivity of parameter names might vary across different systems.
+This is particularly useful in Fanoni Imaging where parameters may be specified in either the query string or hash fragment, and where case-sensitivity of parameter names might vary across different systems.

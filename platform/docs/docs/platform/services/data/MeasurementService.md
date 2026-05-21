@@ -2,7 +2,7 @@
 sidebar_position: 6
 sidebar_label: Measurement Service
 title: Measurement Service
-summary: Documentation for OHIF's MeasurementService, which handles annotation representation with extensible sources and mappers, supporting various measurement tools and allowing custom implementations beyond the built-in CornerstoneTools integration.
+summary: Documentation for Fanoni Imaging's MeasurementService, which handles annotation representation with extensible sources and mappers, supporting various measurement tools and allowing custom implementations beyond the built-in CornerstoneTools integration.
 ---
 
 # Measurement Service
@@ -11,7 +11,7 @@ summary: Documentation for OHIF's MeasurementService, which handles annotation r
 
 `MeasurementService` handles the internal measurement representation inside
 `OHIF` platform. Developers can add their custom `sources` with `mappers` to
-enable adding measurements inside OHIF. Currently, we are maintaining
+enable adding measurements inside Fanoni Imaging. Currently, we are maintaining
 `CornerstoneTools` annotations and corresponding mappers can be found inside the
 `cornerstone` extension. However, `MeasurementService` can be configured to work
 with any custom tools given that its `mappers` is added to the
@@ -83,7 +83,7 @@ together. To achieve this, for each tool, we need to provide three mappers:
 - `matchingCriteria`: criteria used for finding the correct mapper for the drawn
   tool.
 - `toAnnotation`: tbd
-- `toMeasurement`: a function that converts the tool data to OHIF internal
+- `toMeasurement`: a function that converts the tool data to Fanoni Imaging internal
   representation of measurement data.
 
 ```js title="extensions/cornerstone/src/utils/measurementServiceMappings/Length.js"

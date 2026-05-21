@@ -1,16 +1,16 @@
 ---
 id: add-viewport-icon
 title: How to add a custom icon to the viewport corners
-summary: Learn how to add a custom icon or dropdown to one of the viewport corners in OHIF.
+summary: Learn how to add a custom icon or dropdown to one of the viewport corners in Fanoni Imaging.
 ---
 
 # How to add a custom icon to the viewport corners
 
 ## Question
-How can I add a custom icon or dropdown to one of the viewport corners in OHIF?
+How can I add a custom icon or dropdown to one of the viewport corners in Fanoni Imaging?
 
 ## Answer
-OHIF provides a customizable viewport action menu system that allows you to add icons, buttons, or dropdowns to any of the four corners of a viewport (topLeft, topRight, bottomLeft, bottomRight). This is done through the `customizationService` and the viewport action corners API.
+Fanoni Imaging provides a customizable viewport action menu system that allows you to add icons, buttons, or dropdowns to any of the four corners of a viewport (topLeft, topRight, bottomLeft, bottomRight). This is done through the `customizationService` and the viewport action corners API.
 
 Here's a complete example that shows how to add a mode switch dropdown to the top-left corner of the viewport:
 

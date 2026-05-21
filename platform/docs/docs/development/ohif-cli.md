@@ -1,25 +1,25 @@
 ---
 sidebar_position: 3
-sidebar_label: OHIF CLI
-title: OHIF Command Line Interface
-summary: Comprehensive guide to the OHIF CLI tool for managing extensions and modes, including commands for creating, linking, adding, removing, and publishing components, with detailed examples and explanations of the underlying configuration system.
+sidebar_label: Fanoni Imaging CLI
+title: Fanoni Imaging Command Line Interface
+summary: Comprehensive guide to Fanoni Imaging CLI tool for managing extensions and modes, including commands for creating, linking, adding, removing, and publishing components, with detailed examples and explanations of the underlying configuration system.
 ---
 
-# OHIF Command Line Interface
+# Fanoni Imaging Command Line Interface
 
-OHIF-v3 architecture has been re-designed to enable building applications that
+Fanoni Imaging-v3 architecture has been re-designed to enable building applications that
 are easily extensible to various use cases (Modes) that behind the scene would
 utilize desired functionalities (Extensions) to reach the goal of the use case.
 Now, the question is _how to create/remove/install/uninstall an extension and/or
 mode?_
 
-You can use the `cli` script that comes with the OHIF monorepo to achieve these
+You can use the `cli` script that comes with Fanoni Imaging monorepo to achieve these
 goals.
 
 :::note Info
 In the long-term, we envision our `cli` tool to be a separate installable
 package that you can invoke anywhere on your local system to achieve the same
-goals. In the meantime, `cli` will remain as part of the OHIF monorepo and needs
+goals. In the meantime, `cli` will remain as part of Fanoni Imaging monorepo and needs
 to be invoked using the `yarn` command.
 :::
 
@@ -36,7 +36,7 @@ All commands should run from the root of the monorepo.
 :::
 
 
-There are various commands that can be used to interact with the OHIF-v3 CLI. If
+There are various commands that can be used to interact with Fanoni Imaging-v3 CLI. If
 you run the following command, you will see a list of available commands.
 
 ```
@@ -131,7 +131,7 @@ the extension to the Viewer in order to use it. See the
 
 ### link-extension
 
-`link-extension` command will link a local OHIF extension to the Viewer. This
+`link-extension` command will link a local Fanoni Imaging extension to the Viewer. This
 command will utilize `yarn link` to achieve so.
 
 ```bash
@@ -152,7 +152,7 @@ ohif-cli unlink-extension <extensionName>
 ### link-mode
 
 Similar to the `link-extension` command, `link-mode` command will link a local
-OHIF mode to the Viewer.
+Fanoni Imaging mode to the Viewer.
 
 ```bash
 yarn run cli link-mode <modeDir>
@@ -161,7 +161,7 @@ yarn run cli link-mode <modeDir>
 ### unlink-mode
 
 Similar to the `unlink-extension` command, `unlink-mode` command will unlink a
-local OHIF mode from the Viewer.
+local Fanoni Imaging mode from the Viewer.
 
 ```bash
 ohif-cli unlink-mode <modeName>
@@ -169,14 +169,14 @@ ohif-cli unlink-mode <modeName>
 
 ### add-mode
 
-OHIF is a modular viewer. This means that you can install (add) different modes
+Fanoni Imaging is a modular viewer. This means that you can install (add) different modes
 to the viewer if they are published online . `add-mode` command will add a new mode to
 the viewer. It will look for the mode in the NPM registry and installs it. This
 command will also add the extension dependencies that the mode relies on to the
 Viewer (if specified in the peerDependencies section of the package.json).
 
 :::note Important
-`cli` will validate the npm package before adding it to the Viewer. An OHIF mode
+`cli` will validate the npm package before adding it to the Viewer. An Fanoni Imaging mode
 should have `ohif-mode` as one of its keywords.
 :::
 
@@ -186,7 +186,7 @@ Note: If you don't specify the version, the latest version will be used.
 yarn run cli add-mode <packageName> [version]
 ```
 
-For instance `@ohif-test/mode-clock` is an example OHIF mode that we have
+For instance `@ohif-test/mode-clock` is an example Fanoni Imaging mode that we have
 published to NPM. This mode basically has a panel that shows the clock :)
 
 We can add this mode to the Viewer by running the following command:
@@ -211,7 +211,7 @@ The result
 
 ### add-extension
 
-This command will add an OHIF extension to the Viewer. It will look for the
+This command will add an Fanoni Imaging extension to the Viewer. It will look for the
 extension in the NPM registry and install it.
 
 ```bash
@@ -258,7 +258,7 @@ an output would look like this:
 
 ### search
 
-Using `search` command, you can search for OHIF extensions and modes
+Using `search` command, you can search for Fanoni Imaging extensions and modes
 in the NPM registry. This tool can accept a `--verbose` flag to show more
 information about the results.
 

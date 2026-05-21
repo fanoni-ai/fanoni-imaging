@@ -2,12 +2,12 @@
 sidebar_position: 12
 sidebar_label: Android & iOS Debugging
 title: Android & iOS Debugging
-summary: Comprehensive guide for debugging OHIF Viewer on mobile devices, covering setup of Android and iOS emulators, step-by-step instructions for connecting Chrome DevTools and Safari Web Inspector, and video tutorials demonstrating the debugging workflow.
+summary: Comprehensive guide for debugging Fanoni Imaging on mobile devices, covering setup of Android and iOS emulators, step-by-step instructions for connecting Chrome DevTools and Safari Web Inspector, and video tutorials demonstrating the debugging workflow.
 ---
 
-# Android & iOS Debugging for OHIF using Emulators
+# Android & iOS Debugging for Fanoni Imaging using Emulators
 
-This guide covers how to debug the OHIF viewer on Android and iOS emulators using Chrome DevTools and Safari Web Inspector, respectively. You can use these tools to inspect elements, debug JavaScript, and view console logs for the web content running on the emulators.
+This guide covers how to debug Fanoni Imaging viewer on Android and iOS emulators using Chrome DevTools and Safari Web Inspector, respectively. You can use these tools to inspect elements, debug JavaScript, and view console logs for the web content running on the emulators.
 
 ## Android Emulator Setup with Android Studio
 
@@ -33,7 +33,7 @@ This guide covers how to debug the OHIF viewer on Android and iOS emulators usin
 
 4. **Open a Browser on the Emulator:**
    - Once the emulator is running, open the **Chrome** app on the virtual device.
-   - Navigate to the OHIF Viewer URL to view the application. The URL will be 10.0.2.2:3000, you can read more about it [here](https://developer.android.com/studio/run/emulator-networking).
+   - Navigate to the Fanoni Imaging URL to view the application. The URL will be 10.0.2.2:3000, you can read more about it [here](https://developer.android.com/studio/run/emulator-networking).
 
 5. **Debug Using Chrome DevTools:**
    - On your development machine, open Google Chrome.
@@ -46,7 +46,7 @@ This guide covers how to debug the OHIF viewer on Android and iOS emulators usin
 
 ### Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wYa10-djAfI" title="OHIF Debugging Guide for Android" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wYa10-djAfI" title="Fanoni Imaging Debugging Guide for Android" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -75,8 +75,8 @@ This guide covers how to debug the OHIF viewer on Android and iOS emulators usin
    - You will see the web pages open on the iOS simulator. Select the page to open the inspector.
 
 5. **Happy Debugging!:**
-   - You can now use the Safari Web Inspector to inspect elements, debug JavaScript, and view logs for the OHIF Viewer on the iOS simulator.
+   - You can now use the Safari Web Inspector to inspect elements, debug JavaScript, and view logs for the Fanoni Imaging on the iOS simulator.
 
 ### Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_M5e6RFl36E" title="OHIF Debugging Guide for iOS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_M5e6RFl36E" title="Fanoni Imaging Debugging Guide for iOS" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

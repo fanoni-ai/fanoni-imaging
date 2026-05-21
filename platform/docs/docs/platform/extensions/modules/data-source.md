@@ -2,19 +2,19 @@
 sidebar_position: 3
 sidebar_label: Data Source
 title: Data Source Module
-summary: Documentation for OHIF Data Source Module, which defines ways to fetch and map data into OHIF's native format, covering built-in sources like dicomweb and dicomjson, and explaining how to create custom data sources for proprietary backends.
+summary: Documentation for Fanoni Imaging Data Source Module, which defines ways to fetch and map data into Fanoni Imaging's native format, covering built-in sources like dicomweb and dicomjson, and explaining how to create custom data sources for proprietary backends.
 ---
 
 # Module: Data Source
 
 ## Overview
 
-We have built couple of methods for fetching and mapping data into OHIF’s native
+We have built couple of methods for fetching and mapping data into Fanoni Imaging’s native
 format, which we call DataSources, and have provided one implementation of this
 standard.
 
 You can make another datasource implementation which communicates to your
-backend and maps to OHIF’s native format, then use any existing mode on your
+backend and maps to Fanoni Imaging’s native format, then use any existing mode on your
 platform. Your data doesn’t even need to be DICOM if you can map some
 proprietary data to the correct format.
 

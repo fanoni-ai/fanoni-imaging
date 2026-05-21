@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: Toolbar Service
 title: Toolbar Service
-summary: Documentation for OHIF's ToolbarService, which manages the viewer's toolbar UI components, including button creation, section organization, and command execution, with support for nested dropdowns and state management.
+summary: Documentation for Fanoni Imaging's ToolbarService, which manages the viewer's toolbar UI components, including button creation, section organization, and command execution, with support for nested dropdowns and state management.
 ---
 
 # Toolbar **Service**
@@ -226,7 +226,7 @@ ToolbarService.createButton({
 In order to organize the buttons, you can create button sections in the toolbar. And
 assign buttons to each section separately.
 
-OHIF provides a `primary` section by default. You can add more sections as needed in your UI
+Fanoni Imaging provides a `primary` section by default. You can add more sections as needed in your UI
 and use toolbarService to create and manage them. (You can look at the toolBox implementation
 which take advantage of having a dedicated section for the tools with advanced options,
 we use that in the segmentation mode).

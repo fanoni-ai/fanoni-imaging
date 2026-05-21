@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: Google Cloud Healthcare Integration
-summary: Guide to setting up Google Cloud Healthcare API as a DICOM data source for OHIF, including project creation, API configuration, OAuth authentication setup, and implementation details for connecting the viewer to Google-hosted medical imaging data.
+summary: Guide to setting up Google Cloud Healthcare API as a DICOM data source for Fanoni Imaging, including project creation, API configuration, OAuth authentication setup, and implementation details for connecting the viewer to Google-hosted medical imaging data.
 ---
 
 # Google Cloud Healthcare
@@ -123,7 +123,7 @@ Images can even be transcoded on the fly if this is desired.
 
 1. Open the `config/google.js` file and change `YOURCLIENTID` to your Client ID
    value.
-1. Run the OHIF Viewer using the config/google.js configuration file
+1. Run the Fanoni Imaging using the config/google.js configuration file
 
 ```bash
 cd OHIFViewer
@@ -131,10 +131,10 @@ yarn install --frozen-lockfile
 APP_CONFIG=config/google.js yarn run dev
 ```
 
-## Configuring Google Cloud Healthcare as a datasource in OHIF
+## Configuring Google Cloud Healthcare as a datasource in Fanoni Imaging
 
 A Google Cloud Healthcare DICOM store can be configured as a DICOMweb datasource
-in OHIF. A full or partial path is permitted in the configuration file. For
+in Fanoni Imaging. A full or partial path is permitted in the configuration file. For
 partial paths, the [data source configuration UI](../configuration/dataSources/configuration-ui.md)
 will assist in filling in the missing pieces. For example, a configuration with
 empty `wadoUriRoot`, `qidoRoot` and `wadoRoot` will prompt for the entire path

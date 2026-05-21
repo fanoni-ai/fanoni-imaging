@@ -2,14 +2,14 @@
 sidebar_position: 7
 sidebar_label: ToolGroup Service
 title: ToolGroup Service
-summary: Documentation for OHIF's ToolGroupService, which manages tool groups and their associated tools, allowing organization and control of measurement, annotation, and manipulation tools across different viewports.
+summary: Documentation for Fanoni Imaging's ToolGroupService, which manages tool groups and their associated tools, allowing organization and control of measurement, annotation, and manipulation tools across different viewports.
 ---
 
 # Tool Group Service
 
 ## Overview
 
-The `ToolGroupService` is responsible for managing tool groups in the OHIF Viewer.
+The `ToolGroupService` is responsible for managing tool groups in the Fanoni Imaging.
 
 :::tip
 Read more about toolGroups [here](https://www.cornerstonejs.org/docs/concepts/cornerstone-tools/toolGroups)

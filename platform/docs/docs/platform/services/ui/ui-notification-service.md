@@ -2,7 +2,7 @@
 sidebar_position: 2
 sidebar_label: UI Notification Service
 title: UI Notification Service
-summary: Documentation for OHIF's UI Notification Service, which provides a standardized way to display non-intrusive, contextual notifications for timely and relevant information to users throughout the application.
+summary: Documentation for Fanoni Imaging's UI Notification Service, which provides a standardized way to display non-intrusive, contextual notifications for timely and relevant information to users throughout the application.
 ---
 # UI Notification Service
 
@@ -43,7 +43,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 | [Snackbar Provider][snackbar-provider]\* | [SnackbarContainer][snackbar-container]\* |
 | customComponent | user extensions via `setServiceImplementation({customComponent: Snackbar})` |
 
-`*` - Denotes maintained by OHIF
+`*` - Denotes maintained by Fanoni Imaging
 
 > 3rd Party implementers may be added to this table via pull requests.
 
@@ -52,8 +52,8 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/services/UINotificationService/index.js
-[snackbar-provider]: https://github.com/OHIF/Viewers/blob/master/platform/ui/src/contextProviders/SnackbarProvider.js
-[snackbar-container]: https://github.com/OHIF/Viewers/blob/master/platform/ui/src/components/snackbar/SnackbarContainer.js
+[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UINotificationService/index.js
+[snackbar-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/SnackbarProvider.js
+[snackbar-container]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/components/snackbar/SnackbarContainer.js
 [ux-article]: https://uxplanet.org/how-to-design-notifications-for-better-ux-6fb0711be54d
 <!-- prettier-ignore-end -->

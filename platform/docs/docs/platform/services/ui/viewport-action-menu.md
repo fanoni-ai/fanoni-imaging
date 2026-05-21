@@ -2,12 +2,12 @@
 sidebar_position: 8
 sidebar_label: Viewport Action Corners
 title: Viewport Action Corners Service
-summary: Documentation for OHIF's Viewport Action Corners Service, which manages interactive UI components placed in viewport corners, enabling flexible positioning, priority ordering, and dynamic updates of components for viewport-specific control.
+summary: Documentation for Fanoni Imaging's Viewport Action Corners Service, which manages interactive UI components placed in viewport corners, enabling flexible positioning, priority ordering, and dynamic updates of components for viewport-specific control.
 ---
 
 # Viewport Action Corners Service
 
-The Viewport Action Corners Service is a powerful tool for managing interactive components in the corners of viewports within the OHIF viewer. This service allows developers to dynamically add, remove, and organize various UI elements such as menus, buttons, or custom components in specific locations around the viewport.
+The Viewport Action Corners Service is a powerful tool for managing interactive components in the corners of viewports within Fanoni Imaging viewer. This service allows developers to dynamically add, remove, and organize various UI elements such as menus, buttons, or custom components in specific locations around the viewport.
 
 ## Overview
 

@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Language
 
-OHIF supports internationalization capabilities and setting the general language
+Fanoni Imaging supports internationalization capabilities and setting the general language
 of the Viewer.
 
 It should be noted that we don't have complete translations for all the components

@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: Multi Monitor Service
 title: Multi Monitor Service
-summary: Documentation for OHIF's MultiMonitorService, which provides basic support for opening and managing multiple viewer windows, including split-screen options and cross-window communication capabilities.
+summary: Documentation for Fanoni Imaging's MultiMonitorService, which provides basic support for opening and managing multiple viewer windows, including split-screen options and cross-window communication capabilities.
 ---
 
 
@@ -61,7 +61,7 @@ The service supports two predefined configurations:
 
 The `multimonitor` configuration setting in the
 [configuration file](../../../configuration/configurationFiles.md) specifies various
-properties for each of the OHIF windows opened when multimonitor is launched. The setting is
+properties for each of Fanoni Imaging windows opened when multimonitor is launched. The setting is
 an array of properties for each [configuration](#configurations) defined.
 Each entry in the array is an object with the following properties.
 
@@ -70,7 +70,7 @@ Each entry in the array is an object with the following properties.
 - `test`: A function that takes a single object argument containing the property
 `multimontior` (i.e. the [configuration](#configurations)). The function should return `true`
 if this array entry should be applied to the [configuration](#configurations).
-- `screens`: An array of objects that define each of the OHIF screens to be opened
+- `screens`: An array of objects that define each of Fanoni Imaging screens to be opened
 
 Each `screen` array entry above has the following properties.
 

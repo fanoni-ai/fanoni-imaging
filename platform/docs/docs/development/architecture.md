@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 sidebar_label: Architecture
-title: OHIF Architecture
-summary: Detailed explanation of OHIF Viewer's architecture, covering the platform's core components, extensions system, modes concept, and the relationships between these elements that enable building flexible and extensible medical imaging applications.
+title: Fanoni Imaging Architecture
+summary: Detailed explanation of Fanoni Imaging's architecture, covering the platform's core components, extensions system, modes concept, and the relationships between these elements that enable building flexible and extensible medical imaging applications.
 ---
 
 # Architecture
@@ -18,7 +18,7 @@ plays.
 
 ## Overview
 
-The [OHIF Medical Image Viewing Platform][viewers-project] is maintained as a
+The [Fanoni Imaging Medical Image Viewing Platform][viewers-project] is maintained as a
 [`monorepo`][monorepo]. This means that this repository, instead of containing a
 single project, contains many projects. If you explore our project structure,
 you'll see the following:
@@ -50,16 +50,16 @@ you'll see the following:
 └── README.md
 ```
 
-OHIF v3 is composed of the following components, described in detail in further
+Fanoni Imaging v3 is composed of the following components, described in detail in further
 sections:
 
 - `@ohif/app`: The core framework that controls extension registration, mode
   composition and routing.
 - `@ohif/core`: A library of useful and reusable medical imaging functionality
   for the web.
-- `@ohif/ui`: A library of reusable components to build OHIF-styled applications
+- `@ohif/ui`: A library of reusable components to build Fanoni Imaging-styled applications
   with.
-- `Extensions`: A set of building blocks for building applications. The OHIF org
+- `Extensions`: A set of building blocks for building applications. The Fanoni Imaging org
   maintains a few core libraries.
 - `Modes`: Configuration objects that tell @ohif/app how to compose
   extensions to build applications on different routes of the platform.
@@ -76,8 +76,8 @@ behavior changed in `OHIF-v3` and their api is expanded. In summary:
 > wish to use them. Basically, extensions in `OHIF-v3` are **building blocks**
 > for building applications.
 
-OHIF team maintains several high value and commonly used functionalities in its
-own extensions. For a list of extensions maintained by OHIF,
+Fanoni Imaging team maintains several high value and commonly used functionalities in its
+own extensions. For a list of extensions maintained by Fanoni Imaging,
 [check out this helpful table](../platform/extensions/index.md#maintained-extensions).
 As an example `default` extension provides a default viewer layout, a
 study/series browser and a datasource that maps to a DICOMWeb compliant backend.
@@ -86,11 +86,11 @@ study/series browser and a datasource that maps to a DICOMWeb compliant backend.
 
 ## Modes
 
-The `modes` directory contains workflows that can be registered with OHIF within
+The `modes` directory contains workflows that can be registered with Fanoni Imaging within
 certain `routes`. The mode will get used once the user opens the viewer on the
 registered route.
 
-OHIF extensions were designed to provide certain core functionalities for
+Fanoni Imaging extensions were designed to provide certain core functionalities for
 building your viewer. However, often in medical imaging we face a specific use
 case in which we are using some core functionalities, adding our specific UI,
 and use it in our workflows. Previously, to achieve this you had to create an
@@ -142,11 +142,11 @@ is still up for discussion.
 
 ### `@ohif/core`
 
-OHIF core is a carefully maintained and tested set of web-based medical imaging
+Fanoni Imaging core is a carefully maintained and tested set of web-based medical imaging
 functions and classes. This library includes managers and services used from
 within the viewer app.
 
-OHIF core is largely similar to the @ohif/core library in v2, however a lot of
+Fanoni Imaging core is largely similar to the @ohif/core library in v2, however a lot of
 logic has been moved to extensions: however all logic about DICOMWeb and other
 data fetching mechanisms have been pulled out, as these now live in extensions,
 described later.
@@ -154,7 +154,7 @@ described later.
 ### `@ohif/ui`
 
 Firstly, a large time-consumer/barrier for entry we discovered was building new
-UI in a timely manner that fit OHIF’s theme. For this reason we have built a new
+UI in a timely manner that fit Fanoni Imaging’s theme. For this reason we have built a new
 UI component library which contains all the components one needs to build their
 own viewer.
 
@@ -168,7 +168,7 @@ it is not mandatory for extension components to use.
 
 ## Overview of the architecture
 
-OHIF-v3 architecture can be seen in the following figure. We will explore each
+Fanoni Imaging-v3 architecture can be seen in the following figure. We will explore each
 piece in more detail.
 
 ![mode-archs](../assets/img/mode-archs.png)
@@ -196,12 +196,12 @@ new mode as well.
   -->
 
 <!-- prettier-ignore-start -->
-[monorepo]: https://github.com/OHIF/Viewers/issues/768
-[viewers-project]: https://github.com/OHIF/Viewers
+[monorepo]: https://github.com/Fanoni Imaging/Viewers/issues/768
+[viewers-project]: https://github.com/Fanoni Imaging/Viewers
 [viewer-npm]: https://www.npmjs.com/package/@ohif/app
 [pwa]: https://developers.google.com/web/progressive-web-apps/
 [configuration]: ../configuration/configurationFiles.md
 [extensions]: ../platform/extensions/index.md
-[core-github]: https://github.com/OHIF/viewers/platform/core
-[ui-github]: https://github.com/OHIF/Viewers/tree/master/platform/ui
+[core-github]: https://github.com/Fanoni Imaging/viewers/platform/core
+[ui-github]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/ui
 <!-- prettier-ignore-end -->

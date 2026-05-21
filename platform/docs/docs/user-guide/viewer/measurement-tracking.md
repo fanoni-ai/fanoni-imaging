@@ -5,7 +5,7 @@ sidebar_position: 4
 # Measurement Tracking
 
 ## Introduction
-OHIF-V3's `Basic Viewer` implements a `Measurement Tracking` workflow. Measurement
+Fanoni Imaging-V3's `Basic Viewer` implements a `Measurement Tracking` workflow. Measurement
 tracking allows you to:
 
 - Draw annotations and have them shown in the measurement panel

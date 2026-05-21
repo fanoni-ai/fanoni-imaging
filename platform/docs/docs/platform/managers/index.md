@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Introduction
 title: Managers Introduction
-summary: Overview of OHIF's manager system, which handles critical application infrastructure including extension registration, service management, command execution, and hotkey binding to coordinate functionality across the platform.
+summary: Overview of Fanoni Imaging's manager system, which handles critical application infrastructure including extension registration, service management, command execution, and hotkey binding to coordinate functionality across the platform.
 ---
 
 # Managers
@@ -72,7 +72,7 @@ features.
 
 <!-- prettier-ignore-start -->
 
-[core-services]: https://github.com/OHIF/Viewers/tree/master/platform/core/src/services
-[services-manager]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/services/ServicesManager.js
+[core-services]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/core/src/services
+[services-manager]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/ServicesManager.js
 [cross-cutting-concerns]: https://en.wikipedia.org/wiki/Cross-cutting_concern
 <!-- prettier-ignore-end -->

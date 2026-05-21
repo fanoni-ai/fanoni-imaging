@@ -2,14 +2,14 @@
 sidebar_position: 1
 sidebar_label: Configuration Files
 title: Configuration Files
-summary: Comprehensive guide to configuring OHIF Viewer, including data sources, environment variables, advanced options like study prefetching, and detailed explanations of configuration parameters for performance optimization and feature customization.
+summary: Comprehensive guide to configuring Fanoni Imaging, including data sources, environment variables, advanced options like study prefetching, and detailed explanations of configuration parameters for performance optimization and feature customization.
 ---
 
 # Config files
 
 After following the steps outlined in
 [Getting Started](./../development/getting-started.md), you'll notice that the
-OHIF Viewer has data for several studies and their images. You didn't add this
+Fanoni Imaging has data for several studies and their images. You didn't add this
 data, so where is it coming from?
 
 By default, the viewer is configured to connect to a Amazon S3 bucket that is hosting
@@ -61,7 +61,7 @@ window.config = {
 
 > As you can see a new change in `OHIF-v3` is the addition of `dataSources`. You
 > can build your own datasource and map it to the internal data structure of
-> OHIF’s > metadata and enjoy using other peoples developed mode on your own
+> Fanoni Imaging’s > metadata and enjoy using other peoples developed mode on your own
 > data!
 >
 > You can read more about data sources at
@@ -118,7 +118,7 @@ window.config = ({ servicesManager } = {}) => {
 
 
 Here are a list of some options available:
-- `disableEditing`:  If true, it disables editing in OHIF, hiding edit buttons in segmentation
+- `disableEditing`:  If true, it disables editing in Fanoni Imaging, hiding edit buttons in segmentation
   panel and locking already stored measurements.
 - `maxNumberOfWebWorkers`: The maximum number of web workers to use for
   decoding. Defaults to minimum of `navigator.hardwareConcurrency` and
@@ -186,7 +186,7 @@ if auth headers are used, a preflight request is required.
   }
   ```
 - `showLoadingIndicator`: (default to true), if set to false, the loading indicator will not be shown when navigating between studies.
-- `showStudyList`: (default to false), if set to false, the OHIF search (or work list) page will not be shown nor will there be a back button (chevron) in the viewer to navigate to it
+- `showStudyList`: (default to false), if set to false, Fanoni Imaging search (or work list) page will not be shown nor will there be a back button (chevron) in the viewer to navigate to it
 - `useNorm16Texture`: (default to false), if set to true, it will use 16 bit data type for the image data wherever possible which has
   significant impact on reducing the memory usage. However, the 16Bit textures require EXT_texture_norm16 extension in webGL 2.0 (you can check if you have it here https://webglreport.com/?v=2). In addition to the extension, there are reported problems for Intel Macs that might cause the viewer to crash. In summary, it is great a configuration if you have support for it.
 - `useSharedArrayBuffer` (default to 'TRUE', options: 'AUTO', 'FALSE', 'TRUE', note that these are strings), for volume loading we use sharedArrayBuffer to be able to
@@ -201,7 +201,7 @@ if auth headers are used, a preflight request is required.
 Points to consider while using `dangerouslyUseDynamicConfig`:<br/>
   - User have to enable this feature by setting `dangerouslyUseDynamicConfig.enabled:true`. By default it is `false`.
   - Regex helps to avoid easy exploit. Default is `/.*/`. Setup your own regex to choose a specific source of configuration only.
-  - System administrators can return `cross-origin: same-origin` with OHIF files to disallow any loading from other origin. It will block read access to resources loaded from a different origin to avoid potential attack vector.
+  - System administrators can return `cross-origin: same-origin` with Fanoni Imaging files to disallow any loading from other origin. It will block read access to resources loaded from a different origin to avoid potential attack vector.
   - Example config:
     ```js
     dangerouslyUseDynamicConfig: {
@@ -263,7 +263,7 @@ This will result in two panels, one with `dicomSeg.panel` and `tracked.measureme
 
 ### Study Prefetcher
 
-You can enable the study prefetcher so that OHIF loads the next/previous series/display sets
+You can enable the study prefetcher so that Fanoni Imaging loads the next/previous series/display sets
 based on the proximity to the current series/display set. This can be useful to improve the user experience
 
 
@@ -301,7 +301,7 @@ reasons:
   and rendering. This might be the original syntax the image was stored in or another syntax that the server deems efficient.
 
 - **Avoids Transcoding**: Transcoding (converting from one transfer syntax to another) can be a resource-intensive process.
- Since the OHIF Viewer supports all transfer syntaxes, it is fine to accept any transfer syntax (transfer-syntax=*).
+ Since the Fanoni Imaging supports all transfer syntaxes, it is fine to accept any transfer syntax (transfer-syntax=*).
  This allows the server to send the images in their stored syntax, avoiding the need for costly on-the-fly conversions.
  This approach not only saves server resources but also reduces response times by leveraging the viewer's capability to handle various syntaxes directly.
 
@@ -365,7 +365,7 @@ output.
 [dicom-web]: https://en.wikipedia.org/wiki/DICOMweb
 [storescu]: https://support.dcmtk.org/docs/storescu.html
 [webpack-proxy]: https://webpack.js.org/configuration/dev-server/#devserverproxy
-[orthanc-docker-compose]: https://github.com/OHIF/Viewers/tree/master/platform/app/.recipes/Nginx-Orthanc
+[orthanc-docker-compose]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/.recipes/Nginx-Orthanc
 <!-- Archives -->
 [dcm4chee]: https://github.com/dcm4che/dcm4chee-arc-light
 [dcm4chee-docker]: https://github.com/dcm4che/dcm4chee-arc-light/wiki/Running-on-Docker
@@ -375,7 +375,7 @@ output.
 [dicomcloud-install]: https://github.com/DICOMcloud/DICOMcloud#running-the-code
 [osirix]: https://www.osirix-viewer.com/
 [horos]: https://www.horosproject.org/
-[default-config]: https://github.com/OHIF/Viewers/blob/master/platform/app/public/config/default.js
-[html-templates]: https://github.com/OHIF/Viewers/tree/master/platform/app/public/html-templates
-[config-files]: https://github.com/OHIF/Viewers/tree/master/platform/app/public/config
+[default-config]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/public/config/default.js
+[html-templates]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/html-templates
+[config-files]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/config
 <!-- prettier-ignore-end -->

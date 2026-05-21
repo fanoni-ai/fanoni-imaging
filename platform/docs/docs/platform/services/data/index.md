@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Overview
 title: Data Services Overview
-summary: Overview of OHIF's data services architecture, which replaced the Redux store with a more modular approach using service-specific state management and a pub/sub pattern for communication between components.
+summary: Overview of Fanoni Imaging's data services architecture, which replaced the Redux store with a more modular approach using service-specific state management and a pub/sub pattern for communication between components.
 ---
 
 # Overview

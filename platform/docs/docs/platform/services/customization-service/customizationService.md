@@ -2,7 +2,7 @@
 sidebar_label: Introduction
 sidebar_position: 1
 title: Customization Service
-summary: Documentation for OHIF's Customization Service, which provides a flexible framework for configuring and overriding viewer components across different scopes (default, mode, global), supporting dynamic customization of UI elements and behaviors.
+summary: Documentation for Fanoni Imaging's Customization Service, which provides a flexible framework for configuring and overriding viewer components across different scopes (default, mode, global), supporting dynamic customization of UI elements and behaviors.
 ---
 
 import { customizations, TableGenerator } from './sampleCustomizations';
@@ -539,7 +539,7 @@ onModeEnter() {
 
 needless to say if you opted to choose `name: default` in the `getCustomizationModule` it was applied globally.
 
-## Customizable Parts of OHIF
+## Customizable Parts of Fanoni Imaging
 
 Below we are providing the example configuration for global scenario (using the configuration file), however, you can also use the `setCustomizations` method to set the customizations.
 

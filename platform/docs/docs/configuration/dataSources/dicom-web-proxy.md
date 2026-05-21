@@ -2,12 +2,12 @@
 sidebar_position: 4
 sidebar_label: DICOMweb Proxy
 title: DICOMweb Proxy
-summary: Documents the DICOMweb Proxy data source which constructs a dynamic DICOMweb datasource from a configuration JSON file, allowing OHIF to delegate subsequent requests for metadata and images to the configured server.
+summary: Documents the DICOMweb Proxy data source which constructs a dynamic DICOMweb datasource from a configuration JSON file, allowing Fanoni Imaging to delegate subsequent requests for metadata and images to the configured server.
 ---
 
 # DICOMweb Proxy
 
-You can launch the OHIF Viewer with a url that returns a JSON file which
+You can launch the Fanoni Imaging with a url that returns a JSON file which
 contains a DICOMWeb configuration. The DICOMweb Proxy constructs a DICOMweb
 datasource and delegates subsequent requests for metadata and images to that.
 

@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: UI Dialog Service
 title: UI Dialog Service
-summary: Documentation for OHIF's UI Dialog Service, which provides streamlined dialog windows for user attention, input collection, and information display, with methods for creating and dismissing multiple dialogs throughout the application.
+summary: Documentation for Fanoni Imaging's UI Dialog Service, which provides streamlined dialog windows for user attention, input collection, and information display, with methods for creating and dismissing multiple dialogs throughout the application.
 ---
 # UI Dialog Service
 
@@ -35,7 +35,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 | ------------------------------------ | -------------------------- |
 | [Dialog Provider][dialog-provider]\* | Baked into Dialog Provider |
 
-`*` - Denotes maintained by OHIF
+`*` - Denotes maintained by Fanoni Imaging
 
 > 3rd Party implementers may be added to this table via pull requests.
 
@@ -44,7 +44,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/OHIF/Viewers/blob/master/platform/core/src/services/UIDialogService/index.js
-[dialog-provider]: https://github.com/OHIF/Viewers/blob/master/platform/ui/src/contextProviders/DialogProvider.js
+[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UIDialogService/index.js
+[dialog-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/DialogProvider.js
 [ux-article]: https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c
 <!-- prettier-ignore-end -->

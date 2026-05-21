@@ -1,6 +1,6 @@
 ---
 title: Study Browser Customization
-summary: Documentation for customizing OHIF's Study Browser component, including configuration options for thumbnails, sorting functions, and display formats to enhance study navigation and selection workflows.
+summary: Documentation for customizing Fanoni Imaging's Study Browser component, including configuration options for thumbnails, sorting functions, and display formats to enhance study navigation and selection workflows.
 sidebar_position: 6
 ---
 

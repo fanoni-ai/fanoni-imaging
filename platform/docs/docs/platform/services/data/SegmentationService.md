@@ -2,7 +2,7 @@
 sidebar_position: 7
 sidebar_label: Segmentation Service
 title: Segmentation Service
-summary: Documentation for OHIF's SegmentationService, which provides tools for creating, managing, and interacting with image segmentations, including labelmap creation, segment operations, and visualization controls.
+summary: Documentation for Fanoni Imaging's SegmentationService, which provides tools for creating, managing, and interacting with image segmentations, including labelmap creation, segment operations, and visualization controls.
 ---
 
 # Segmentation Service

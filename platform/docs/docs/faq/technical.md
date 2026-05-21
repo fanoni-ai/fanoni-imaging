@@ -1,7 +1,7 @@
 ---
 id: technical
 title: Technical FAQ
-summary: Technical explanations and solutions for OHIF Viewer implementation challenges, including required metadata fields, handling large volumes for MPR/rendering, dynamically loading measurements, customizing series sorting, and addressing common rendering issues.
+summary: Technical explanations and solutions for Fanoni Imaging implementation challenges, including required metadata fields, handling large volumes for MPR/rendering, dynamically loading measurements, customizing series sorting, and addressing common rendering issues.
 ---
 
 # Technical FAQ
@@ -36,7 +36,7 @@ For each filter in filters:
 
 
 
-## What are the list of required metadata for the OHIF Viewer to work?
+## What are the list of required metadata for the Fanoni Imaging to work?
 
 
 ### Mandatory
@@ -208,7 +208,7 @@ So if we look at the terminal and get the measurement service we can see there i
 
 ![alt text](faq-measure-2.png)
 
-However, this is the `mapped` cornerstone measurement inside OHIF, and it has additional information such as `geReport` and `source`, which are internal details of OHIF Viewers that you don't need to worry about.
+However, this is the `mapped` cornerstone measurement inside Fanoni Imaging, and it has additional information such as `geReport` and `source`, which are internal details of Fanoni Imaging Viewers that you don't need to worry about.
 
 we can call the `cornerstoneTools` api to grab the raw annotation data with the `uid`
 
@@ -231,7 +231,7 @@ https://ohif-assets.s3.us-east-2.amazonaws.com/ohif-faq/rectangle-roi.json
 
 Now, let's discuss how to load this measurement dynamically and programmatically.
 
-There are numerous places in OHIF where you can add annotations, but we always recommend having your own extensions and modes to maintain full control over your custom API.
+There are numerous places in Fanoni Imaging where you can add annotations, but we always recommend having your own extensions and modes to maintain full control over your custom API.
 
 For this example, I will add the logic in the `longitudinal` mode. However, as mentioned, you can create your own extension and mode, and either use `onModeEnter` or other lifecycle hooks to add annotations. Learn more about lifecycle hooks [here](../platform/extensions/lifecycle.md).
 
@@ -254,7 +254,7 @@ onModeEnter: function ({ servicesManager, extensionManager, commandsManager }: w
 },
 ```
 
-As you can see, we use the CornerstoneTools API to add the annotation. Since OHIF has mappers set up for CornerstoneTools (`extensions/cornerstone/src/utils/measurementServiceMappings/measurementServiceMappingsFactory.ts`), it will automatically map the annotation to the OHIF measurement service.
+As you can see, we use the CornerstoneTools API to add the annotation. Since Fanoni Imaging has mappers set up for CornerstoneTools (`extensions/cornerstone/src/utils/measurementServiceMappings/measurementServiceMappingsFactory.ts`), it will automatically map the annotation to Fanoni Imaging measurement service.
 
 If you refresh the viewer, you'll see the measurement loaded on the image.
 

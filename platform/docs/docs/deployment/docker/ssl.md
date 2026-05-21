@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: SSL Configuration for Docker
-summary: Guide to configuring SSL for OHIF Viewer in Docker deployments, including environment variable setup, certificate mounting, permissions management, and instructions for both CA-signed and self-signed certificate implementation.
+summary: Guide to configuring SSL for Fanoni Imaging in Docker deployments, including environment variable setup, certificate mounting, permissions management, and instructions for both CA-signed and self-signed certificate implementation.
 ---
 
 # SSL
@@ -11,7 +11,7 @@ We make no claims or guarantees regarding this section concerning security. If i
 :::
 
 
-If OHIF is not deployed over SSL, this means information transferred to/from OHIF is not encrypted. Consideration must be given as to whether OHIF should be deployed in a secure context over SSL.
+If Fanoni Imaging is not deployed over SSL, this means information transferred to/from Fanoni Imaging is not encrypted. Consideration must be given as to whether Fanoni Imaging should be deployed in a secure context over SSL.
 
 ### Specifying the SSL Port, Certificate and Private Key
 
@@ -24,7 +24,7 @@ For convenience, the [built Docker image](#building-the-docker-image) can be run
 The volume mounted SSL certificate and private key are mapped to the [`ssl_certificate`](http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate) and [`ssl_certificate_key`](http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate_key) `nginx` directives respectively.
 :::
 
-Similar to the [`nginx` listen port](#configuring-the-nginx-listen-port), the `{SSL_PORT}` environment variable is the internal port that `nginx` listens on to serve the OHIF web server over SSL and has to be likewise published via the `-p` switch.
+Similar to the [`nginx` listen port](#configuring-the-nginx-listen-port), the `{SSL_PORT}` environment variable is the internal port that `nginx` listens on to serve Fanoni Imaging web server over SSL and has to be likewise published via the `-p` switch.
 
 The following is an example command running the Docker container over SSL. Note that depending on the version of Docker, an absolute path to the certificate and private key files might be required.
 
@@ -33,7 +33,7 @@ docker run -d -e SSL_PORT=443 -p 3003:443/tcp -v /path/to/certificate:/etc/ssl/c
 ```
 
 :::caution
-The above deploys OHIF over SSL using `nginx`'s default SSL configuration. For further OHIF server hardening and security configuration, consider enlisting an expert and then editing OHIF's `nginx` [SSL template configuration file](https://github.com/OHIF/Viewers/blob/8a8ae237d26faf123abeb073cbf0cd426c3e9ef2/.docker/Viewer-v3.x/default.ssl.conf.template) with further [security settings](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) and [tweaks](http://nginx.org/en/docs/http/configuring_https_servers.html) and then [build a new Docker image](#building-the-docker-image) from there.
+The above deploys Fanoni Imaging over SSL using `nginx`'s default SSL configuration. For further Fanoni Imaging server hardening and security configuration, consider enlisting an expert and then editing Fanoni Imaging's `nginx` [SSL template configuration file](https://github.com/Fanoni Imaging/Viewers/blob/8a8ae237d26faf123abeb073cbf0cd426c3e9ef2/.docker/Viewer-v3.x/default.ssl.conf.template) with further [security settings](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) and [tweaks](http://nginx.org/en/docs/http/configuring_https_servers.html) and then [build a new Docker image](#building-the-docker-image) from there.
 :::
 
 :::caution
@@ -82,7 +82,7 @@ For a self-signed certificate this is normal and expected. Clicking the `Advance
 ![Self-signed certificate warning](../../assets/img/self-signed-cert-advanced-warning.png)
 
 
-Self-signed certificates might be appropriate for testing or perhaps deploying a site within an organization's internal LAN. In any case, consult an expert prior to deploying OHIF over SSL.
+Self-signed certificates might be appropriate for testing or perhaps deploying a site within an organization's internal LAN. In any case, consult an expert prior to deploying Fanoni Imaging over SSL.
 
 :::tip
 A self-signed certificate can be generated using [`openssl`](https://www.openssl.org/) on the command line.
@@ -109,7 +109,7 @@ To create a self-signed certificate:
     |-keyout|the path and file name where the private key will be written to|
     |-out|the path and file name where the certificate will be written to|
 
-3. Answer the prompts that follow. The table below lists the various prompts. The default value for each prompt is shown within the square brackets. The most important prompt is `Common Name (e.g. server FQDN or YOUR name)`. For this enter the IP address of the OHIF server being secured.
+3. Answer the prompts that follow. The table below lists the various prompts. The default value for each prompt is shown within the square brackets. The most important prompt is `Common Name (e.g. server FQDN or YOUR name)`. For this enter the IP address of Fanoni Imaging server being secured.
 
     |Prompt|
     |------|
@@ -121,7 +121,7 @@ To create a self-signed certificate:
     |Common Name (e.g. server FQDN or YOUR name) []|
     |Email Address []|
 
-4. Once completed, the self-signed certificate and private key will be in the locations specified by the `-keyout` and `-out` flags and can be [volume mounted](#specifying-the-ssl-port-certificate-and-private-key) accordingly to the OHIF Docker container.
+4. Once completed, the self-signed certificate and private key will be in the locations specified by the `-keyout` and `-out` flags and can be [volume mounted](#specifying-the-ssl-port-certificate-and-private-key) accordingly to Fanoni Imaging Docker container.
 
 :::tip
 Windows' users can access `openssl` using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).

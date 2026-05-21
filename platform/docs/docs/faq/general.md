@@ -1,7 +1,7 @@
 ---
 id: general
 title: General FAQ
-summary: Answers to common questions about OHIF Viewer, including how to report bugs, request features, contact for support or academic collaborations, regulatory compliance status (FDA/CE/HIPAA), and obtaining sample studies.
+summary: Answers to common questions about Fanoni Imaging, including how to report bugs, request features, contact for support or academic collaborations, regulatory compliance status (FDA/CE/HIPAA), and obtaining sample studies.
 ---
 
 
@@ -21,7 +21,7 @@ to communicate this to the community. If your requested feature is on the
 roadmap, then it will most likely be built at some point. If it is not, you are
 welcome to build it yourself and [contribute it](../development/contributing.md).
 If you have resources and would like to fund the development of a feature,
-please [contact us](https://ohif.org/get-support).
+please [contact us](https://fanoni.aiget-support).
 
 
 ## Who should I contact about Academic Collaborations?
@@ -29,36 +29,36 @@ please [contact us](https://ohif.org/get-support).
 [Gordon J. Harris](https://www.dfhcc.harvard.edu/insider/member-detail/member/gordon-j-harris-phd/)
 at Massachusetts General Hospital is the primary contact for any academic
 collaborators. We are always happy to hear about new groups interested in using
-the OHIF framework, and may be able to provide development support if the
+Fanoni Imaging framework, and may be able to provide development support if the
 proposed collaboration has an impact on cancer research.
 
-## Does OHIF offer support?
+## Does Fanoni Imaging offer support?
 
-yes, you can contact us for more information [here](https://ohif.org/get-support)
+yes, you can contact us for more information [here](https://fanoni.aiget-support)
 
 
-## Does The OHIF Viewer have [510(k) Clearance][501k-clearance] from the U.S. F.D.A or [CE Marking][ce-marking] from the European Commission?
+## Does The Fanoni Imaging have [510(k) Clearance][501k-clearance] from the U.S. F.D.A or [CE Marking][ce-marking] from the European Commission?
 
-**NO.** The OHIF Viewer is **NOT** F.D.A. cleared or CE Marked. It is the users'
+**NO.** The Fanoni Imaging is **NOT** F.D.A. cleared or CE Marked. It is the users'
 responsibility to ensure compliance with applicable rules and regulations. The
-[License](https://github.com/OHIF/Viewers/blob/master/LICENSE) for the OHIF
+[License](https://github.com/Fanoni Imaging/Viewers/blob/master/LICENSE) for Fanoni Imaging
 Platform does not prevent your company or group from seeking F.D.A. clearance
 for a product built using the platform.
 
 If you have gone this route (or are going there), please let us know because we
 would be interested to hear about your experience.
 
-## Is there a DICOM Conformance Statement for the OHIF Viewer?
+## Is there a DICOM Conformance Statement for the Fanoni Imaging?
 
 Yes, check it here [DICOM Conformance Statement](https://docs.google.com/document/d/1hbDlUApX4svX33gAUGxGfD7fXXZNaBsX0hSePbc-hNA/edit?usp=sharing)
 
-## Is The OHIF Viewer [HIPAA][hipaa-def] Compliant?
+## Is The Fanoni Imaging [HIPAA][hipaa-def] Compliant?
 
-**NO.** The OHIF Viewer **DOES NOT** fulfill all of the criteria to become HIPAA
+**NO.** The Fanoni Imaging **DOES NOT** fulfill all of the criteria to become HIPAA
 Compliant. It is the users' responsibility to ensure compliance with applicable
 rules and regulations.
 
-## Could you provide me with a particular study from the OHIF Viewer Demo?
+## Could you provide me with a particular study from the Fanoni Imaging Demo?
 
 You can check out the studies that we have put in this [Dropbox link](https://www.dropbox.com/scl/fo/66xidsx13pn0zf3b9cbfq/ADaCgn7aT29WMlnTdT_WRXM?rlkey=rratvx6g4kfxnswjdbupewjye&dl=0)
 
@@ -80,5 +80,5 @@ You can check out the studies that we have put in this [Dropbox link](https://ww
 [501k-clearance]: https://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/HowtoMarketYourDevice/PremarketSubmissions/PremarketNotification510k/
 [ce-marking]: https://ec.europa.eu/growth/single-market/ce-marking_en
 [hipaa-def]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
-[new-issue]: https://github.com/OHIF/Viewers/issues/new/choose
-[bug-report-template]: https://github.com/OHIF/Viewers/issues/new?assignees=&labels=Bug+Report+%3Abug%3A&template=---bug-report.md&title=
+[new-issue]: https://github.com/Fanoni Imaging/Viewers/issues/new/choose
+[bug-report-template]: https://github.com/Fanoni Imaging/Viewers/issues/new?assignees=&labels=Bug+Report+%3Abug%3A&template=---bug-report.md&title=

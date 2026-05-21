@@ -1,6 +1,6 @@
 ---
 title: Advanced Customization
-summary: Documentation for advanced OHIF customization techniques, including inheritance patterns, transform functions, and dynamic assembly of customizations to create sophisticated configurations across the platform.
+summary: Documentation for advanced Fanoni Imaging customization techniques, including inheritance patterns, transform functions, and dynamic assembly of customizations to create sophisticated configurations across the platform.
 sidebar_position: 8
 ---
 

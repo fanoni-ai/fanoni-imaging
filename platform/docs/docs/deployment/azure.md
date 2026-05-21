@@ -1,18 +1,18 @@
 ---
 sidebar_position: 12
 title: Microsoft Azure Integration
-summary: Comprehensive guide for configuring OHIF with Microsoft Azure Healthcare APIs, including step-by-step instructions for Azure AD registration, DICOM service setup, CORS configuration, and OAuth authentication implementation.
+summary: Comprehensive guide for configuring Fanoni Imaging with Microsoft Azure Healthcare APIs, including step-by-step instructions for Azure AD registration, DICOM service setup, CORS configuration, and OAuth authentication implementation.
 ---
 
 # Microsoft Azure
 
-This guide explains how to configure a DICOM datasource in OHIF using Azure Healthcare APIs. It focuses on the configuration details and parameters necessary for integration.
+This guide explains how to configure a DICOM datasource in Fanoni Imaging using Azure Healthcare APIs. It focuses on the configuration details and parameters necessary for integration.
 
 ---
 
 ## Configuring Azure Healthcare APIs as a DICOMweb Data Source
 
-Follow these steps to set up Azure as a DICOM datasource for the OHIF Viewer.
+Follow these steps to set up Azure as a DICOM datasource for the Fanoni Imaging.
 
 ---
 
@@ -46,7 +46,7 @@ Follow these steps to set up Azure as a DICOM datasource for the OHIF Viewer.
 
 ### App Client ID and Tenant ID:
 
-1. Copy your app client ID and tenant ID to prepare for use in configuring an OHIF datasource.
+1. Copy your app client ID and tenant ID to prepare for use in configuring an Fanoni Imaging datasource.
 
 ---
 
@@ -83,7 +83,7 @@ Follow these steps to set up Azure as a DICOM datasource for the OHIF Viewer.
 
    ![Access Control](../assets/img/azure10.png)
 
-7. Copy your DICOM service URL to prepare it for usage in OHIF as a datasource:
+7. Copy your DICOM service URL to prepare it for usage in Fanoni Imaging as a datasource:
 
    ![DICOM Service URL](../assets/img/azure3.png)
 
@@ -157,7 +157,7 @@ Update the data source configuration file with your Azure Healthcare APIs detail
 
 ## 3. Running the Viewer with Azure Configuration
 
-1. Save the above configurations in your OHIF Viewer configuration file.
+1. Save the above configurations in your Fanoni Imaging configuration file.
 2. Run the viewer:
 
    ```bash
@@ -174,4 +174,4 @@ Update the data source configuration file with your Azure Healthcare APIs detail
 - Ensure that the Azure Healthcare API is enabled for your subscription and that the necessary permissions (e.g., `Dicom.ReadWrite`) are assigned to the OIDC client.
 - The `qidoRoot`, `wadoUriRoot`, and `wadoRoot` should point to your Azure DICOM service URL. Replace `{your-dicom-instance}` with your actual instance name.
 
-This setup allows OHIF to interact seamlessly with Azure's Healthcare APIs, enabling robust DICOM management and visualization.
+This setup allows Fanoni Imaging to interact seamlessly with Azure's Healthcare APIs, enabling robust DICOM management and visualization.

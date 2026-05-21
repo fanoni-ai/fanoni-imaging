@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Introduction
 title: Modes Introduction
-summary: Overview of OHIF Modes, which are specialized viewer configurations for specific clinical workflows, allowing multiple purpose-specific applications to coexist within a single OHIF deployment.
+summary: Overview of Fanoni Imaging Modes, which are specialized viewer configurations for specific clinical workflows, allowing multiple purpose-specific applications to coexist within a single Fanoni Imaging deployment.
 ---
 
 # Modes
@@ -20,7 +20,7 @@ via url parameters.
 
 <!-- > Modes make extensions (features) more reusable and powerful. -->
 
-OHIF-v3 architecture can be seen in the following:
+Fanoni Imaging-v3 architecture can be seen in the following:
 
 ![mode-archs](../../assets/img/mode-archs.png)
 
@@ -494,7 +494,7 @@ configuration from `config/kheops.js` can be used:
 
 ## Default Modes
 
-There are a number of modes provided in a default OHIF installation.  These
+There are a number of modes provided in a default Fanoni Imaging installation.  These
 are described here, along with some amount of information about extending/configuration
 of those modes.
 
@@ -504,7 +504,7 @@ use the URL for the `longitudinal` mode, and replace the `/viewer` with `/basic`
 
 ### Basic (NOT `Basic Viewer`, which got assigned to `longitudinal`)
 
-The basic mode is a mode that demonstrates the base capabilities of the OHIF
+The basic mode is a mode that demonstrates the base capabilities of Fanoni Imaging
 system, without including features such as longitudinal tracking, segmentation editing
 or other custom capabilities. The left hand panel uses the study browser thumbnails
 without tracking, and the right hand panel uses the basic segmentation panel and the
@@ -514,7 +514,7 @@ base for using when the tracking behaviour of longitudinal mode is not desired.
 It can be used in a default install by direct URL launch to the `/basic` endpoint
 instead of the `/viewer` endpoint.
 
-### Longitudinal (The `Basic Viewer` label in OHIF)
+### Longitudinal (The `Basic Viewer` label in Fanoni Imaging)
 
 The longitudinal mode adds the tracking for measurements in the study browser
 and in the measurements panel, and is otherwise identical to the `basic` mode.

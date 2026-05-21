@@ -2,13 +2,13 @@
 ---
 sidebar_position: 14
 sidebar_label: Notes and Requirements
-title: Notes and Requirements for general OHIF behaviour
-summary: Specifies some of the expected behavior of OHIF generally
+title: Notes and Requirements for general Fanoni Imaging behaviour
+summary: Specifies some of the expected behavior of Fanoni Imaging generally
 ---
 
 # Notes and Requirements
 
-This document just lists general notes and requirements for how OHIF behaves.
+This document just lists general notes and requirements for how Fanoni Imaging behaves.
 The plan is to break this document down into a new sub-category once there
 are sufficient notes/requirements.
 

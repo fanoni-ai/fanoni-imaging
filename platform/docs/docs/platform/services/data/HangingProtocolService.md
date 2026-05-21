@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Hanging Protocol Service
 title: Hanging Protocol Service
-summary: Documentation for OHIF's HangingProtocolService, which manages the automatic arrangement of medical images in viewports based on matching criteria, with support for custom attributes, synchronization, and display set selection.
+summary: Documentation for Fanoni Imaging's HangingProtocolService, which manages the automatic arrangement of medical images in viewports based on matching criteria, with support for custom attributes, synchronization, and display set selection.
 ---
 
 # Hanging Protocol Service

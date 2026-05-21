@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Browser Support
-summary: Documentation of OHIF's browser compatibility standards, including supported browsers (IE11, Firefox, Chrome, Safari, Edge), transpilation and polyfill strategies, and development priorities focused on modern evergreen browsers.
+summary: Documentation of Fanoni Imaging's browser compatibility standards, including supported browsers (IE11, Firefox, Chrome, Safari, Edge), transpilation and polyfill strategies, and development priorities focused on modern evergreen browsers.
 ---
 # Browser Support
 
@@ -12,7 +12,7 @@ in the browsers that we support.
 
 ## In Practice
 
-The OHIF Viewer is capable of _running_ on:
+The Fanoni Imaging is capable of _running_ on:
 
 - IE 11
 - FireFox

@@ -2,7 +2,7 @@
 sidebar_position: 13
 sidebar_label: Web Workers
 title: Web Workers Implementation Guide
-summary: Step-by-step guide for implementing web workers in OHIF to handle computationally intensive tasks in background threads, including worker creation, registration, task execution, progress tracking, and best practices for code organization.
+summary: Step-by-step guide for implementing web workers in Fanoni Imaging to handle computationally intensive tasks in background threads, including worker creation, registration, task execution, progress tracking, and best practices for code organization.
 ---
 # Web Worker Implementation Guide
 

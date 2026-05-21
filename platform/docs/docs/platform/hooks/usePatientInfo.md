@@ -62,7 +62,7 @@ The hook subscribes to the following display set service events:
 
 ## Implementation Details
 
-- Patient name and date of birth are formatted using OHIF utility functions.
+- Patient name and date of birth are formatted using Fanoni Imaging utility functions.
 - The hook checks all active display sets to determine if they belong to different patients.
 - Patient information is initialized with empty strings and updated when display sets are added.
 - When no instances are available in a display set, the hook attempts to get information from the `instance` property as a fallback.
