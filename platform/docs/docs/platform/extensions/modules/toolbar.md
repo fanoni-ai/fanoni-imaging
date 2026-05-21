@@ -8,7 +8,7 @@ summary: Documentation for Fanoni Imaging Toolbar Module, which provides UI comp
 # Module: Toolbar
 
 An extension can register a Toolbar Module by defining a `getToolbarModule`
-method. `OHIF-v3`'s `default` extension (`"@ohif/extension-default"`) provides the
+method. `Fanoni Imaging v3`'s `default` extension (`"@ohif/extension-default"`) provides the
 following toolbar button `uiTypes`:
 
 - `ohif.radioGroup`: which is a simple button that can be clicked

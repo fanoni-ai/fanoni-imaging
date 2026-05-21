@@ -59,8 +59,8 @@ setServiceImplementation({customComponent: Modal})
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UIModalService/index.js
-[modal-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/ModalProvider.js
-[modal-consumer]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/ui/src/components/ohifModal
+[interface]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/services/UIModalService/index.js
+[modal-provider]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/ui/src/contextProviders/ModalProvider.js
+[modal-consumer]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/ui/src/components/ohifModal
 [ux-article]: https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c
 <!-- prettier-ignore-end -->

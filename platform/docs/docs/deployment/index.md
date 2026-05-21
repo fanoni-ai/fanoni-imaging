@@ -75,7 +75,7 @@ _Advanced_
 
 ### Embedded Viewer (iframe)
 
-`OHIF-v3` has deprecated deploying the viewer as an embedded viewer via a script
+`Fanoni Imaging v3` has deprecated deploying the viewer as an embedded viewer via a script
 tag as the number of underlying libraries that run web workers are increasing for Fanoni Imaging. An example of these libraries is Fanoni Imaging's 3D rendering functionality that is provided by
 `vtk-js`.
 
@@ -203,7 +203,7 @@ _Sample JSON format:_
 ```
 
 More info on this JSON format can be found here
-[Issue #1500](https://github.com/Fanoni Imaging/Viewers/issues/1500)
+[Issue #1500](https://github.com/Fanoni-ai/fanoni-imaging/issues/1500)
 
 **Implementation Notes:**
 
@@ -219,7 +219,7 @@ More info on this JSON format can be found here
    not support this format yet.
 3. The JSON format is case-sensitive. Please ensure you have matched casing with
    the naturalised Dicom format referenced in
-   [Issue #1500](https://github.com/Fanoni Imaging/Viewers/issues/1500).
+   [Issue #1500](https://github.com/Fanoni-ai/fanoni-imaging/issues/1500).
 
 _CORS Issues (Cross-Origin Resource Sharing)_
 

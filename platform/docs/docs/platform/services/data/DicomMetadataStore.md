@@ -8,11 +8,11 @@ summary: Documentation for Fanoni Imaging's DicomMetadataStore service, which pr
 
 
 ## Overview
-`DicomMetaDataStore` is the central location that stores the metadata in `OHIF-v3`. There
+`DicomMetaDataStore` is the central location that stores the metadata in `Fanoni Imaging v3`. There
 are several APIs to add study/series/instance metadata and also for getting from the store.
-DataSource utilize the `DicomMetaDataStore` to add the retrieved metadata to `OHIF Viewer`.
+DataSource utilize the `DicomMetaDataStore` to add the retrieved metadata to `Fanoni Imaging`.
 
-> In `OHIF-v3` we have significantly changed the architecture of the metadata storage to
+> In `Fanoni Imaging v3` we have significantly changed the architecture of the metadata storage to
 > provide a much cleaner way of handling metadata-related tasks and services. Classes such as
 > `OHIFInstanceMetadata`, `OHIFSeriesMetadata` and `OHIFStudyMetadata` has been removed and
 > replaced with `DicomMetaDataStore`.

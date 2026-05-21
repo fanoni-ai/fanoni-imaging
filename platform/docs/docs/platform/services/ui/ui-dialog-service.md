@@ -44,7 +44,7 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UIDialogService/index.js
-[dialog-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/DialogProvider.js
+[interface]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/services/UIDialogService/index.js
+[dialog-provider]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/ui/src/contextProviders/DialogProvider.js
 [ux-article]: https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c
 <!-- prettier-ignore-end -->

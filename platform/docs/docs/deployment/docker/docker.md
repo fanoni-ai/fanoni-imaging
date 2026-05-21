@@ -6,7 +6,7 @@ summary: Comprehensive guide for deploying Fanoni Imaging using Docker, covering
 
 # Docker
 
-The Fanoni Imaging source code provides a [Dockerfile](https://github.com/Fanoni Imaging/Viewers/blob/master/Dockerfile) to create and run a Docker image that containerizes an [nginx](https://www.nginx.com/) web server serving the Fanoni Imaging.
+The Fanoni Imaging source code provides a [Dockerfile](https://github.com/Fanoni-ai/fanoni-imaging/blob/master/Dockerfile) to create and run a Docker image that containerizes an [nginx](https://www.nginx.com/) web server serving the Fanoni Imaging.
 
 :::info
 This Dockerfile is the same used to generate the [Fanoni Imaging image(s) on Docker Hub](https://hub.docker.com/r/ohif/app/tags).

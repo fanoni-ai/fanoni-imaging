@@ -7,7 +7,7 @@ summary: Documentation on customizing the visual appearance of the Fanoni Imagin
 
 # Viewer: Theming
 
-`OHIF-v3` has introduced the
+`Fanoni Imaging v3` has introduced the
 [`LayoutTemplateModule`](./extensions/modules/layout-template.md) which enables
 addition of custom layouts. You can easily design your custom components inside
 an extension and consume it via the layoutTemplate module you write.

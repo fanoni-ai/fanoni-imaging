@@ -168,11 +168,11 @@ accurate documentation, we will link to each provider's own recommended steps:
         6.	Copy Fanoni Imaging viewer’s build output from ‘platform\app\dist’ folder to the ‘$web’ container.
         7.	Open browser and navigate to the viewer root URL copied in the step above. It should display Fanoni Imaging viewer with data from default data source.
 
-       ![image](https://github.com/Fanoni Imaging/Viewers/assets/132684122/236a574b-0f05-4d90-a721-df8720d05949)
+       ![image](https://github.com/Fanoni-ai/fanoni-imaging/assets/132684122/236a574b-0f05-4d90-a721-df8720d05949)
     Special consideration while accessing DicomJson data source :
-      • Due to the way routing is handled in react, it may error out in production when trying to display data through dicomJson data source. E.g. https://[Static Website endpoint]/viewer/dicomjson?url= https://ohif-dicom-json-example.s3.amazonaws.com/LIDC-IDRI-0001.json
+      • Due to the way routing is handled in react, it may error out in production when trying to display data through dicomJson data source. E.g. https://[Static Website endpoint]/viewer/dicomjson?url= https://imaging.fanoni.ai/dicomweb
       •	Resolution to this is to set error page to ‘index.html’ at the website level. This will ensure that all errors are redirected to root and requests are further served from root path.
-       ![image](https://github.com/Fanoni Imaging/Viewers/assets/132684122/87696c90-c344-489a-af15-b992434555f9)
+       ![image](https://github.com/Fanoni-ai/fanoni-imaging/assets/132684122/87696c90-c344-489a-af15-b992434555f9)
 
 - [Add SSL Support](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-https-custom-domain-cdn)
 - [Configure a Custom Domain](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name)

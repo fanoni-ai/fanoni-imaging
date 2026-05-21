@@ -210,7 +210,7 @@ function WorkList({
     {
       title: t('Header:About'),
       icon: 'info',
-      onClick: () => show({ content: AboutModal, title: 'About OHIF Viewer' }),
+      onClick: () => show({ content: AboutModal, title: 'About Fanoni Imaging' }),
     },
     {
       title: t('Header:Preferences'),

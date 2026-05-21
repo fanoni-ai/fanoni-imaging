@@ -251,7 +251,7 @@ and the upgrade to new versions of modes tends to be more consistent.
 
 ### Consuming Extensions
 
-As mentioned in the [Extensions](../extensions/index.md) section, in `OHIF-v3`
+As mentioned in the [Extensions](../extensions/index.md) section, in `Fanoni Imaging v3`
 developers write their extensions to create reusable functionalities that later
 can be used by `modes`. Now, it is time to describe how the registered
 extensions will get utilized for a workflow mode via its `id`.
@@ -262,7 +262,7 @@ the `extension` name and version number. In addition, to use a module element yo
 requires the left panel with name of `AIPanel` that is added by the
 `myAIExtension` via the following `getPanelModule` code, it should address it as
 `myAIExtension.panelModule.AIPanel` inside the mode configuration file. In the
-background `OHIF` will handle grabbing the correct panel via `ExtensionManager`.
+background `Fanoni Imaging` will handle grabbing the correct panel via `ExtensionManager`.
 
 ```js title="extensions/myAIExtension/getPanelModule.js"
 import PanelAI from './PanelAI.js';

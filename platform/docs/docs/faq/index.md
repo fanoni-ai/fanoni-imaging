@@ -40,7 +40,7 @@ yes, you can contact us for more information [here](https://fanoni.aiget-support
 
 **NO.** The Fanoni Imaging is **NOT** F.D.A. cleared or CE Marked. It is the users'
 responsibility to ensure compliance with applicable rules and regulations. The
-[License](https://github.com/Fanoni Imaging/Viewers/blob/master/LICENSE) for Fanoni Imaging
+[License](https://github.com/Fanoni-ai/fanoni-imaging/blob/master/LICENSE) for Fanoni Imaging
 Platform does not prevent your company or group from seeking F.D.A. clearance
 for a product built using the platform.
 
@@ -79,5 +79,5 @@ You can check out the studies that we have put in this [Dropbox link](https://ww
 [501k-clearance]: https://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/HowtoMarketYourDevice/PremarketSubmissions/PremarketNotification510k/
 [ce-marking]: https://ec.europa.eu/growth/single-market/ce-marking_en
 [hipaa-def]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
-[new-issue]: https://github.com/Fanoni Imaging/Viewers/issues/new/choose
-[bug-report-template]: https://github.com/Fanoni Imaging/Viewers/issues/new?assignees=&labels=Bug+Report+%3Abug%3A&template=---bug-report.md&title=
+[new-issue]: https://github.com/Fanoni-ai/fanoni-imaging/issues/new/choose
+[bug-report-template]: https://github.com/Fanoni-ai/fanoni-imaging/issues/new?assignees=&labels=Bug+Report+%3Abug%3A&template=---bug-report.md&title=

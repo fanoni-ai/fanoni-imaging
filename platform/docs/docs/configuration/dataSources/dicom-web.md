@@ -247,10 +247,10 @@ below:
 [osirix]: http://www.osirix-viewer.com/
 [horos]: https://www.horosproject.org/
 [default-config]:
-  https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/public/config/default.js
+  https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/app/public/config/default.js
 [html-templates]:
-  https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/html-templates
+  https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/app/public/html-templates
 [config-files]:
-  https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/config
+  https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/app/public/config
 [storescu]: http://support.dcmtk.org/docs/storescu.html
 [webpack-proxy]: https://webpack.js.org/configuration/dev-server/#devserverproxy

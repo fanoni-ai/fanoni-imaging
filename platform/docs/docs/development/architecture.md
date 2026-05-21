@@ -13,7 +13,7 @@ possible use cases and decided to significantly change and improve the
 architecture.
 
 Below, we aim to demystify that complexity by providing insight into how
-`OHIF Platform` is architected, and the role each of its dependent libraries
+`Fanoni Imaging Platform` is architected, and the role each of its dependent libraries
 plays.
 
 ## Overview
@@ -69,11 +69,11 @@ sections:
 The `extensions` directory contains many packages that provide essential
 functionalities such as rendering, study/series browsers, measurement tracking
 that modes can consume to enable a certain workflow. Extensions have had their
-behavior changed in `OHIF-v3` and their api is expanded. In summary:
+behavior changed in `Fanoni Imaging v3` and their api is expanded. In summary:
 
-> In `OHIF-v3`, extensions no longer automatically hook themselves to the app.
+> In `Fanoni Imaging v3`, extensions no longer automatically hook themselves to the app.
 > Now, registering an extension makes its component available to `modes` that
-> wish to use them. Basically, extensions in `OHIF-v3` are **building blocks**
+> wish to use them. Basically, extensions in `Fanoni Imaging v3` are **building blocks**
 > for building applications.
 
 Fanoni Imaging team maintains several high value and commonly used functionalities in its
@@ -94,7 +94,7 @@ Fanoni Imaging extensions were designed to provide certain core functionalities 
 building your viewer. However, often in medical imaging we face a specific use
 case in which we are using some core functionalities, adding our specific UI,
 and use it in our workflows. Previously, to achieve this you had to create an
-extension to add have such feature. `OHIF-v3` introduces `Modes` to enable
+extension to add have such feature. `Fanoni Imaging v3` introduces `Modes` to enable
 building such workflows by re-using the core functionalities from the
 extensions.
 
@@ -110,8 +110,8 @@ segmentation tools which is not needed for the other two. As you can see, modes
 are a layer on top of extensions, that you can configure in order to achieve
 certain workflows.
 
-To summarize the difference between extensions and modes in `OHIF-v3` and
-extensions in `OHIF-v2`
+To summarize the difference between extensions and modes in `Fanoni Imaging v3` and
+extensions in `v2`
 
 > - `Modes` are configuration objects that tell _@ohif/app_ how to compose
 >   extensions to build applications on different routes of the platform.
@@ -164,7 +164,7 @@ logic you desire. As the components are presentational, you may swap out
 the viewer. The UI library is here to make development easier and quicker, but
 it is not mandatory for extension components to use.
 
-[Check out our component library!](https://ui.ohif.org/)
+[Check out our component library!](https://docs.fanoni.ai/components/)
 
 ## Overview of the architecture
 
@@ -196,12 +196,12 @@ new mode as well.
   -->
 
 <!-- prettier-ignore-start -->
-[monorepo]: https://github.com/Fanoni Imaging/Viewers/issues/768
-[viewers-project]: https://github.com/Fanoni Imaging/Viewers
+[monorepo]: https://github.com/Fanoni-ai/fanoni-imaging/issues/768
+[viewers-project]: https://github.com/Fanoni-ai/fanoni-imaging
 [viewer-npm]: https://www.npmjs.com/package/@ohif/app
 [pwa]: https://developers.google.com/web/progressive-web-apps/
 [configuration]: ../configuration/configurationFiles.md
 [extensions]: ../platform/extensions/index.md
 [core-github]: https://github.com/Fanoni Imaging/viewers/platform/core
-[ui-github]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/ui
+[ui-github]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/ui
 <!-- prettier-ignore-end -->

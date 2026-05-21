@@ -9,7 +9,7 @@ summary: Documentation for Fanoni Imaging Commands Module, which allows extensio
 
 ## Overview
 `CommandsModule` includes list of arbitrary functions. These may activate tools, communicate with a server, open a modal, etc.
-The significant difference between `OHIF-v3` and `OHIF-v2` is that in `v3` a `mode` defines
+The significant difference between `Fanoni Imaging v3` and `v2` is that in `v3` a `mode` defines
 its toolbar, and which commands each tool call is inside in its toolDefinition
 
 An extension can register a Commands Module by defining a `getCommandsModule`
@@ -44,7 +44,7 @@ const getCommandsModule = () => ({
 Each definition returned by the Commands Module is registered to the
 `ExtensionManager`'s `CommandsManager`.
 
-> `storeContexts` has been removed in `OHIF-v3` and now modules have access to all commands and services. This change enables support for user-registered services.
+> `storeContexts` has been removed in `Fanoni Imaging v3` and now modules have access to all commands and services. This change enables support for user-registered services.
 
 ## Command Definitions
 

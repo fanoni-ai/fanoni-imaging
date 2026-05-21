@@ -48,11 +48,11 @@ The service supports two predefined configurations:
 
 #### Example URLs:
 - **Split Screen:**
-  `http://viewer.ohif.org/.....&multimonitor=split`
+  `http://imaging.fanoni.ai/.....&multimonitor=split`
   Splits the primary monitor into two windows when a study is viewed.
 
 - **Multi-Monitor with All Screens:**
-  `http://viewer.ohif.org/.....&multimonitor=2&screenNumber=0&launchAll`
+  `http://imaging.fanoni.ai/.....&multimonitor=2&screenNumber=0&launchAll`
   Launches two monitors and opens all configured screens.
 
 ---

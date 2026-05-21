@@ -11,7 +11,7 @@ Data services are the first category of services which deal with handling non-ui
 related state Each service have their own internal state which they handle.
 
 > We have replaced the _redux_ store. Instead, we have introduced various
-> services and a pub/sub pattern to subscribe and run, which makes the `OHIF-v3`
+> services and a pub/sub pattern to subscribe and run, which makes the `Fanoni Imaging v3`
 > architecture nice and clean.
 
 We maintain the following non-ui Services:

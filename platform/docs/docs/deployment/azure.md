@@ -161,7 +161,7 @@ Update the data source configuration file with your Azure Healthcare APIs detail
 2. Run the viewer:
 
    ```bash
-   cd OHIFViewer
+   cd fanoni-imaging
    yarn install --frozen-lockfile
    APP_CONFIG=config/azure.js yarn run dev
    ```

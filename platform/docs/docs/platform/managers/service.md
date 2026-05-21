@@ -49,7 +49,7 @@ export default class ServicesManager {
 
 ## Default Registered Services
 
-By default, `OHIF-v3` registers the following services in the `appInit`.
+By default, `Fanoni Imaging v3` registers the following services in the `appInit`.
 
 ```js title="platform/app/src/appInit.js"
 servicesManager.registerServices([

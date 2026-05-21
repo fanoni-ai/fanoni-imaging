@@ -14,7 +14,7 @@ datasource and delegates subsequent requests for metadata and images to that.
 Usage is similar to that of the [DICOM JSON](./dicom-json.md) datasource and
 might look like
 
-`https://viewer.ohif.org/viewer/dicomwebproxy?url=https://ohif-dicom-json-example.s3.amazonaws.com/dicomweb.json`
+`https://imaging.fanoni.ai/viewer/dicomwebproxy?url=https://ohif-dicom-json-example.s3.amazonaws.com/dicomweb.json`
 
 The url to the location of the JSON file is passed in the query
 after the `dicomwebproxy` string, which is

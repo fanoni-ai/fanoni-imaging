@@ -10,7 +10,7 @@ summary: Documentation for Fanoni Imaging's MeasurementService, which handles an
 ## Overview
 
 `MeasurementService` handles the internal measurement representation inside
-`OHIF` platform. Developers can add their custom `sources` with `mappers` to
+`Fanoni Imaging` platform. Developers can add their custom `sources` with `mappers` to
 enable adding measurements inside Fanoni Imaging. Currently, we are maintaining
 `CornerstoneTools` annotations and corresponding mappers can be found inside the
 `cornerstone` extension. However, `MeasurementService` can be configured to work

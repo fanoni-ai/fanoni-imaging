@@ -18,7 +18,7 @@ _With Git:_
 
 ```bash
 # Clone the remote repository to your local machine
-git clone https://github.com/OHIF/Viewers.git
+git clone https://github.com/Fanoni-ai/fanoni-imaging.git
 ```
 
 More on: _[`git clone`](https://git-scm.com/docs/git-clone),
@@ -26,7 +26,7 @@ More on: _[`git clone`](https://git-scm.com/docs/git-clone),
 
 _From .zip:_
 
-[Fanoni Imaging/Viewers: master.zip](https://github.com/Fanoni Imaging/Viewers/archive/master.zip)
+[Fanoni Imaging/Viewers: master.zip](https://github.com/Fanoni-ai/fanoni-imaging/archive/master.zip)
 
 ### Restore Dependencies & Build
 
@@ -125,8 +125,8 @@ web application. For a starting point, check out this repository's own use of:
 
 <!-- prettier-ignore-start -->
 [circleci]: https://circleci.com/gh/Fanoni Imaging/Viewers
-[circleci-config]: https://github.com/Fanoni Imaging/Viewers/blob/master/.circleci/config.yml
+[circleci-config]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/.circleci/config.yml
 [netlify]: https://app.netlify.com/sites/ohif/deploys
-[netlify.toml]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/netlify.toml
-[build-deploy-preview.sh]: https://github.com/Fanoni Imaging/Viewers/blob/master/.netlify/build-deploy-preview.sh
+[netlify.toml]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/app/netlify.toml
+[build-deploy-preview.sh]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/.netlify/build-deploy-preview.sh
 <!-- prettier-ignore-end -->

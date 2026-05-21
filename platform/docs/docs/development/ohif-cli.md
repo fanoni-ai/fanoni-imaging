@@ -46,7 +46,7 @@ yarn run cli --help
 which will output
 
 ```
-OHIF CLI
+Fanoni CLI
 
 Options:
   -V, --version                          output the version number
@@ -59,10 +59,10 @@ Commands:
   remove-extension <packageName>         removes an ohif extension
   add-mode <packageName> [version]       Removes an ohif mode
   remove-mode <packageName>              Removes an ohif mode
-  link-extension <packageDir>            Links a local OHIF extension to the Viewer to be used for development
-  unlink-extension <extensionName>       Unlinks a local OHIF extension from the Viewer
-  link-mode <packageDir>                 Links a local OHIF mode to the Viewer to be used for development
-  unlink-mode <extensionName>            Unlinks a local OHIF mode from the Viewer
+  link-extension <packageDir>            Links a local extension to the Viewer to be used for development
+  unlink-extension <extensionName>       Unlinks a local extension from the Viewer
+  link-mode <packageDir>                 Links a local mode to the Viewer to be used for development
+  unlink-mode <extensionName>            Unlinks a local mode from the Viewer
   list                                   List Added Extensions and Modes
   search [options]                       Search NPM for the list of Modes and Extensions
   help [command]                         display help for command

@@ -59,7 +59,7 @@ window.config = {
 };
 ```
 
-> As you can see a new change in `OHIF-v3` is the addition of `dataSources`. You
+> As you can see a new change in `Fanoni Imaging v3` is the addition of `dataSources`. You
 > can build your own datasource and map it to the internal data structure of
 > Fanoni Imaging’s > metadata and enjoy using other peoples developed mode on your own
 > data!
@@ -365,7 +365,7 @@ output.
 [dicom-web]: https://en.wikipedia.org/wiki/DICOMweb
 [storescu]: https://support.dcmtk.org/docs/storescu.html
 [webpack-proxy]: https://webpack.js.org/configuration/dev-server/#devserverproxy
-[orthanc-docker-compose]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/.recipes/Nginx-Orthanc
+[orthanc-docker-compose]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/app/.recipes/Nginx-Orthanc
 <!-- Archives -->
 [dcm4chee]: https://github.com/dcm4che/dcm4chee-arc-light
 [dcm4chee-docker]: https://github.com/dcm4che/dcm4chee-arc-light/wiki/Running-on-Docker
@@ -375,7 +375,7 @@ output.
 [dicomcloud-install]: https://github.com/DICOMcloud/DICOMcloud#running-the-code
 [osirix]: https://www.osirix-viewer.com/
 [horos]: https://www.horosproject.org/
-[default-config]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/app/public/config/default.js
-[html-templates]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/html-templates
-[config-files]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/app/public/config
+[default-config]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/app/public/config/default.js
+[html-templates]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/app/public/html-templates
+[config-files]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/app/public/config
 <!-- prettier-ignore-end -->

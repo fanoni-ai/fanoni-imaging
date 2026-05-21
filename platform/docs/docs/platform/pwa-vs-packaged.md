@@ -33,4 +33,4 @@ You can read more about this particular strategy in our
 
 ## Commonjs Bundle (Packaged Script)
 
-We are not supporting `Commonjs` bundling inside `OHIF-v3`.
+We are not supporting `Commonjs` bundling inside `Fanoni Imaging v3`.

@@ -33,7 +33,7 @@ docker run -d -e SSL_PORT=443 -p 3003:443/tcp -v /path/to/certificate:/etc/ssl/c
 ```
 
 :::caution
-The above deploys Fanoni Imaging over SSL using `nginx`'s default SSL configuration. For further Fanoni Imaging server hardening and security configuration, consider enlisting an expert and then editing Fanoni Imaging's `nginx` [SSL template configuration file](https://github.com/Fanoni Imaging/Viewers/blob/8a8ae237d26faf123abeb073cbf0cd426c3e9ef2/.docker/Viewer-v3.x/default.ssl.conf.template) with further [security settings](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) and [tweaks](http://nginx.org/en/docs/http/configuring_https_servers.html) and then [build a new Docker image](#building-the-docker-image) from there.
+The above deploys Fanoni Imaging over SSL using `nginx`'s default SSL configuration. For further Fanoni Imaging server hardening and security configuration, consider enlisting an expert and then editing Fanoni Imaging's `nginx` [SSL template configuration file](https://github.com/Fanoni-ai/fanoni-imaging/blob/8a8ae237d26faf123abeb073cbf0cd426c3e9ef2/.docker/Viewer-v3.x/default.ssl.conf.template) with further [security settings](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) and [tweaks](http://nginx.org/en/docs/http/configuring_https_servers.html) and then [build a new Docker image](#building-the-docker-image) from there.
 :::
 
 :::caution

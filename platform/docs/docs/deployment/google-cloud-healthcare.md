@@ -126,7 +126,7 @@ Images can even be transcoded on the fly if this is desired.
 1. Run the Fanoni Imaging using the config/google.js configuration file
 
 ```bash
-cd OHIFViewer
+cd fanoni-imaging
 yarn install --frozen-lockfile
 APP_CONFIG=config/google.js yarn run dev
 ```

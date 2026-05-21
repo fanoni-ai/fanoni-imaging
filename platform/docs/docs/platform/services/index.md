@@ -21,14 +21,14 @@ Each service should be:
 - able to fail and/or be removed without breaking the application
 - completely interchangeable with another module implementing the same interface
 
-> In `OHIF-v3` we have added multiple non-UI services and have introduced
+> In `Fanoni Imaging v3` we have added multiple non-UI services and have introduced
 > **pub/sub** pattern to reduce coupling between layers.
 >
 > [Read more about Pub/Sub](./pubsub.md)
 
 ## Services
 
-The following services is available in the `OHIF-v3`.
+The following services is available in the `Fanoni Imaging v3`.
 
 <table>
     <thead>
@@ -202,7 +202,7 @@ The following services is available in the `OHIF-v3`.
 
 <!-- prettier-ignore-start -->
 
-[core-services]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/core/src/services
-[services-manager]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/ServicesManager.js
+[core-services]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/core/src/services
+[services-manager]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/services/ServicesManager.js
 [cross-cutting-concerns]: https://en.wikipedia.org/wiki/Cross-cutting_concern
 <!-- prettier-ignore-end -->

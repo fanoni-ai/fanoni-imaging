@@ -19,7 +19,7 @@ we make to the Fanoni Imaging, then follow these steps:
   - `git clone https://github.com/YOUR-USERNAME/Viewers`
 - Add Fanoni Imaging/Viewers as a [remote repository][add-remote-repo] labeled `upstream`
   - Navigate to the cloned project's directory
-  - `git remote add upstream https://github.com/OHIF/Viewers.git`
+  - `git remote add upstream https://github.com/Fanoni-ai/fanoni-imaging.git`
 
 With this setup, you can now [sync your fork][sync-changes] to keep it
 up-to-date with the upstream (original) repository. This is called a "Triangular
@@ -161,6 +161,6 @@ do NOT commit or push your changes! Low and moderate risk vulnerabilities are ac
 [add-remote-repo]: https://help.github.com/en/articles/fork-a-repo#step-3-configure-git-to-sync-your-fork-with-the-original-spoon-knife-repository
 [sync-changes]: https://help.github.com/en/articles/syncing-a-fork
 [triangular-workflow]: https://github.blog/2015-07-29-git-2-5-including-multiple-worktrees-and-triangular-workflows/#improved-support-for-triangular-workflows
-[ohif-viewers-repo]: https://github.com/Fanoni Imaging/Viewers/
-[ohif-viewers]: https://github.com/Fanoni Imaging/Viewers
+[ohif-viewers-repo]: https://github.com/Fanoni-ai/fanoni-imaging/
+[ohif-viewers]: https://github.com/Fanoni-ai/fanoni-imaging
 <!-- prettier-ignore-end -->

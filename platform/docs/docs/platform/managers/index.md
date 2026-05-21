@@ -9,11 +9,11 @@ summary: Overview of Fanoni Imaging's manager system, which handles critical app
 
 ## Overview
 
-`OHIF` uses `Managers` to accomplish various purposes such as registering new
+`Fanoni Imaging` uses `Managers` to accomplish various purposes such as registering new
 services, dependency injection, and aggregating and exposing `extension`
 features.
 
-`OHIF-v3` provides the following managers which we will discuss in depth.
+`Fanoni Imaging v3` provides the following managers which we will discuss in depth.
 
 <table>
     <thead>
@@ -72,7 +72,7 @@ features.
 
 <!-- prettier-ignore-start -->
 
-[core-services]: https://github.com/Fanoni Imaging/Viewers/tree/master/platform/core/src/services
-[services-manager]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/ServicesManager.js
+[core-services]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/platform/core/src/services
+[services-manager]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/services/ServicesManager.js
 [cross-cutting-concerns]: https://en.wikipedia.org/wiki/Cross-cutting_concern
 <!-- prettier-ignore-end -->

@@ -52,8 +52,8 @@ is expected to support, [check out it's interface in `@ohif/core`][interface]
 -->
 
 <!-- prettier-ignore-start -->
-[interface]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/services/UINotificationService/index.js
-[snackbar-provider]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/contextProviders/SnackbarProvider.js
-[snackbar-container]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/ui/src/components/snackbar/SnackbarContainer.js
+[interface]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/services/UINotificationService/index.js
+[snackbar-provider]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/ui/src/contextProviders/SnackbarProvider.js
+[snackbar-container]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/ui/src/components/snackbar/SnackbarContainer.js
 [ux-article]: https://uxplanet.org/how-to-design-notifications-for-better-ux-6fb0711be54d
 <!-- prettier-ignore-end -->

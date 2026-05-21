@@ -26,7 +26,7 @@ In the following, we will discuss each category.
 
 ### Tracked vs Untracked Measurements
 
-`OHIF-v3` implements a workflow for measurement tracking that can be seen below.
+`Fanoni Imaging v3` implements a workflow for measurement tracking that can be seen below.
 
 ![user-measurement-panel-modal](../../assets/img/tracking-workflow1.png)
 
@@ -35,7 +35,7 @@ On the other hand, if you decline the tracking prompt, the measurement will be c
 
 
 Below, you can see different icons that appear for a tracked vs. untracked series in
-`OHIF-v3`.
+`Fanoni Imaging v3`.
 
 ![tracked-not-tracked](../../assets/img/tracked-not-tracked.png)
 
@@ -61,7 +61,7 @@ Below, you can see different icons that appear for a tracked vs. untracked serie
 
 ### Reading and Writing DICOM SR
 
-`OHIF-v3` provides full support for reading, writing and mapping the DICOM Structured
+`Fanoni Imaging v3` provides full support for reading, writing and mapping the DICOM Structured
 Report (SR) to interactable `Cornerstone Tools`. When you load an already exported
 DICOM SR into the viewer, you will be prompted whether to track the measurements
 for the series or not.

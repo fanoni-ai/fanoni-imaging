@@ -298,7 +298,7 @@ their own `init`, but they share the `onModeEnter`.
 
 > How can I change the `workList` appearance or add a new login page?
 
-This is where `OHIF-v3` shines! Since the default `layoutTemplate` is written
+This is where `Fanoni Imaging v3` shines! Since the default `layoutTemplate` is written
 for the viewer part, you can simply add a new `layoutTemplate` and use the
 component you have written for that route. `Mode` handle showing the correct
 component for the specified route.

@@ -32,7 +32,7 @@ The `preRegistration` hook receives an object containing the
 
 Example `preRegistration` implementation that register a new service and make it
 available in the app. We will talk more in details for creating a new service
-for `OHIF-v3`.
+for `Fanoni Imaging v3`.
 
 ```js
 // new service inside new extension

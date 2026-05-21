@@ -104,7 +104,7 @@ selection isn't too expensive.
 
 ## DicomMetadataStore
 
-In `OHIF-v3` we have a central location for the metadata of studies, and they are
+In `Fanoni Imaging v3` we have a central location for the metadata of studies, and they are
 located in `DicomMetadataStore`. Your custom datasource can communicate with
 `DicomMetadataStore` to store, and fetch Study/Series/Instance metadata. We will
 learn more about `DicomMetadataStore` in services.

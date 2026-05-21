@@ -16,7 +16,7 @@ winning protocol (highest score) gets applied and its settings run for the viewp
 to be arranged.
 
 
-In `OHIF-v3` hanging protocols you can:
+In `Fanoni Imaging v3` hanging protocols you can:
 
 - Define what layout the viewport should starts with (e.g., 2x2 layout)
 - Specify the type of the viewport and its orientation (e.g., stack, volume with Sagittal view)
@@ -568,7 +568,7 @@ Additional series level criteria, such as modality rules must be included at the
 ## Callbacks
 
 
-Hanging protocols in `OHIF-v3` provide the flexibility to define various callbacks that allow you to customize the behavior of your viewer when specific events occur during protocol execution. These callbacks are defined in the `ProtocolNotifications` type and can be added to your hanging protocol configuration.
+Hanging protocols in `Fanoni Imaging v3` provide the flexibility to define various callbacks that allow you to customize the behavior of your viewer when specific events occur during protocol execution. These callbacks are defined in the `ProtocolNotifications` type and can be added to your hanging protocol configuration.
 
 Each callback is an array of commands or actions that are executed when the event occurs.
 

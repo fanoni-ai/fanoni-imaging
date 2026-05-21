@@ -12,7 +12,7 @@ server as well as a list of study and series instance UIDs along with metadata.
 
 An example would look like
 
-`https://viewer.ohif.org/viewer/dicomjson?url=https://ohif-dicom-json-example.s3.amazonaws.com/LIDC-IDRI-0001.json`
+`https://imaging.fanoni.ai/viewer/dicomjson?url=https://ohif-dicom-json-example.s3.amazonaws.com/LIDC-IDRI-0001.json`
 
 As you can see the url to the location of the JSON file is passed in the query
 after the `dicomjson` string, which is

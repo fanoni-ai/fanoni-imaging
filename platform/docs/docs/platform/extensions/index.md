@@ -7,13 +7,13 @@ summary: Comprehensive introduction to Fanoni Imaging viewer extension system, e
 
 # Introduction
 
-We have re-designed the architecture of the `OHIF-v3` to enable building
+We have re-designed the architecture of the `Fanoni Imaging v3` to enable building
 applications that are easily extensible to various use cases (modes) that behind
 the scene would utilize desired functionalities (extensions) to reach the goal
 of the use case.
 
 Previously, extensions were “additive” and could not easily be mixed and matched
-within the same viewer for different use cases. Previous `OHIF-v2` architecture
+within the same viewer for different use cases. Previous `v2` architecture
 meant that any minor extension alteration usually would require the user to hard
 fork. E.g. removing some tools from the toolbar of the cornerstone
 extension meant you had to hard fork it, which was frustrating if the
@@ -74,7 +74,7 @@ export default {
 ## Fanoni Imaging-Maintained Extensions
 
 A small number of powerful extensions for popular use cases are maintained by
-Fanoni Imaging. They're co-located in the [`OHIF/Viewers`][viewers-repo] repository, in
+Fanoni Imaging. They're co-located in the [`Fanoni Imaging/Viewers`][viewers-repo] repository, in
 the top level [`extensions/`][ext-source] directory.
 
 <table>
@@ -114,7 +114,7 @@ the top level [`extensions/`][ext-source] directory.
                 <a href="">dicom-pdf</a>
             </td>
             <td>
-                Renders PDFs for a <a href="https://github.com/Fanoni Imaging/Viewers/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6">specific SopClassUID</a>.
+                Renders PDFs for a <a href="https://github.com/Fanoni-ai/fanoni-imaging/blob/master/extensions/dicom-pdf/src/OHIFDicomPDFSopClassHandler.js#L4-L6">specific SopClassUID</a>.
             </td>
             <td>Viewport, SopClassHandler</td>
         </tr>
@@ -341,7 +341,7 @@ are used to determine the appropriate implementation of the rotation behavior.
 -->
 
 <!-- prettier-ignore-start -->
-[viewers-repo]: https://github.com/Fanoni Imaging/Viewers
-[ext-source]: https://github.com/Fanoni Imaging/Viewers/tree/master/extensions
-[module-types]: https://github.com/Fanoni Imaging/Viewers/blob/master/platform/core/src/extensions/MODULE_TYPES.js
+[viewers-repo]: https://github.com/Fanoni-ai/fanoni-imaging
+[ext-source]: https://github.com/Fanoni-ai/fanoni-imaging/tree/master/extensions
+[module-types]: https://github.com/Fanoni-ai/fanoni-imaging/blob/master/platform/core/src/extensions/MODULE_TYPES.js
 <!-- prettier-ignore-end -->
