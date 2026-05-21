@@ -17,6 +17,9 @@ jobs:
         with:
           bun-version: 1.2.23
 
+      - name: Install root workspace dependencies
+        run: bun install
+
       - name: Install docs dependencies
         working-directory: platform/docs
         run: bun install
