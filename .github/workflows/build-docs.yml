@@ -19,7 +19,7 @@ jobs:
 
       - name: Install docs dependencies
         working-directory: platform/docs
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build docs
         working-directory: platform/docs
