@@ -1,0 +1,34 @@
+{
+  "Name": "Fanoni PACS",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "HttpPort": 8042,
+  "DicomPort": 4242,
+  "DicomAet": "FANONI",
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": false,
+
+  "HttpCompressionEnabled": true,
+  "ConcurrentJobs": 4,
+  "OverwriteInstances": true,
+
+  "Plugins": [
+    "/usr/share/orthanc/plugins"
+  ],
+
+  "LuaScripts": ["/etc/orthanc/notify_fhir.lua"],
+
+  "DicomWeb": {
+    "Enable": true,
+    "Root": "/dicom-web/",
+    "EnableWado": true,
+    "WadoRoot": "/wado",
+    "Ssl": false,
+    "QidoCaseSensitive": false,
+    "StowMaxInstances": 0,
+    "StowMaxSize": 0
+  },
+
+  "Cross-Origin Resource Sharing": {
+    "AllowedOrigins": ["http://localhost:3000", "http://localhost:5174", "http://localhost:5200"]
+  }
+}

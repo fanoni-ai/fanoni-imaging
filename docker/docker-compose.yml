@@ -1,0 +1,17 @@
+services:
+  orthanc:
+    image: orthancteam/orthanc
+    container_name: fanoni-orthanc
+    ports:
+      - "8042:8042"   # Orthanc web UI + REST API
+      - "4242:4242"   # DICOM protocol (C-STORE, C-FIND, C-MOVE)
+    volumes:
+      - ./orthanc/orthanc.json:/etc/orthanc/orthanc.json:ro
+      - ./orthanc/notify_fhir.lua:/etc/orthanc/notify_fhir.lua:ro
+      - orthanc-storage:/var/lib/orthanc/db
+    environment:
+      VERBOSE_STARTUP: "true"
+    restart: unless-stopped
+
+volumes:
+  orthanc-storage:

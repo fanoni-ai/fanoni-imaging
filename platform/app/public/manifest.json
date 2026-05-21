@@ -1,7 +1,7 @@
 {
-  "name": "OHIF Viewer",
-  "short_name": "Viewer",
-  "description": "OHIF Viewer",
+  "name": "Fanoni Imaging",
+  "short_name": "Fanoni",
+  "description": "Fanoni Imaging Platform",
   "dir": "auto",
   "lang": "en-US",
   "orientation": "any",

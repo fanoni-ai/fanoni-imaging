@@ -3,7 +3,63 @@
 window.config = {
   name: 'config/default.js',
   routerBasename: null,
-  // whiteLabeling: {},
+  whiteLabeling: {
+    createLogoComponentFn: function (React) {
+      return React.createElement(
+        'a',
+        {
+          href: '/',
+          rel: 'noopener noreferrer',
+          style: {
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            textDecoration: 'none',
+          },
+        },
+        // Icon: original OHIF 2×2 grid with cyan stroke
+        React.createElement(
+          'svg',
+          { width: '28', height: '28', viewBox: '0 0 28 28', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' },
+          React.createElement('rect', { x: '1', y: '1', width: '11', height: '11', rx: '2.5', fill: '#000', stroke: '#5ACCE6', strokeWidth: '1.5' }),
+          React.createElement('rect', { x: '16', y: '1', width: '11', height: '11', rx: '2.5', fill: '#000', stroke: '#5ACCE6', strokeWidth: '1.5' }),
+          React.createElement('rect', { x: '1', y: '16', width: '11', height: '11', rx: '2.5', fill: '#000', stroke: '#5ACCE6', strokeWidth: '1.5' }),
+          React.createElement('rect', { x: '16', y: '16', width: '11', height: '11', rx: '2.5', fill: '#000', stroke: '#5ACCE6', strokeWidth: '1.5' })
+        ),
+        // Wordmark
+        React.createElement(
+          'span',
+          { style: { display: 'flex', alignItems: 'baseline', gap: '4px' } },
+          React.createElement(
+            'span',
+            {
+              style: {
+                color: '#ffffff',
+                fontWeight: '600',
+                fontSize: '16px',
+                letterSpacing: '-0.02em',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+              },
+            },
+            'Fanoni'
+          ),
+          React.createElement(
+            'span',
+            {
+              style: {
+                color: '#5ACCE6',
+                fontWeight: '400',
+                fontSize: '13px',
+                letterSpacing: '0.02em',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+              },
+            },
+            'Imaging'
+          )
+        )
+      );
+    },
+  },
   extensions: [],
   modes: [],
   customizationService: {},
@@ -88,7 +144,7 @@ window.config = {
       ],
     },
   ],
-  defaultDataSourceName: 'ohif',
+  defaultDataSourceName: 'orthanc',
   /* Dynamic config allows user to pass "configUrl" query string this allows to load config without recompiling application. The regex will ensure valid configuration source */
   // dangerouslyUseDynamicConfig: {
   //   enabled: true,
@@ -214,11 +270,11 @@ window.config = {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
       sourceName: 'orthanc',
       configuration: {
-        friendlyName: 'local Orthanc DICOMWeb Server',
-        name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost/pacs/dicom-web',
-        qidoRoot: 'http://localhost/pacs/dicom-web',
-        wadoRoot: 'http://localhost/pacs/dicom-web',
+        friendlyName: 'Fanoni PACS (Orthanc)',
+        name: 'orthanc',
+        wadoUriRoot: '/dicomweb',
+        qidoRoot: '/dicomweb',
+        wadoRoot: '/dicomweb',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         dicomUploadEnabled: true,
