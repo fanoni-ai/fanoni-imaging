@@ -22,7 +22,6 @@ module.exports = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
     'docusaurus-plugin-image-zoom',
     [
@@ -63,9 +62,6 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      liveCodeBlock: {
-        playgroundPosition: 'bottom',
-      },
       docs: {
         sidebar: {
           hideable: true,
@@ -133,7 +129,6 @@ module.exports = {
               { label: 'Introduction', to: '/' },
               { label: 'Getting Started', to: 'development/getting-started' },
               { label: 'FAQ', to: '/faq' },
-              { label: 'Resources', to: '/resources' },
             ],
           },
           {
