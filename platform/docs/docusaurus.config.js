@@ -14,7 +14,7 @@ module.exports = {
   projectName: 'fanoni-imaging',
   baseUrl,
   baseUrlIssueBanner: false,
-  url: 'https://docs.fanoni.ai',
+  url: 'https://docin.fanoni.ai',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
