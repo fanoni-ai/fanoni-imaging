@@ -5,7 +5,7 @@
   "DicomPort": 4242,
   "DicomAet": "FANONI",
   "RemoteAccessAllowed": true,
-  "AuthenticationEnabled": false,
+  "AuthenticationEnabled": true,
 
   "HttpCompressionEnabled": true,
   "ConcurrentJobs": 4,

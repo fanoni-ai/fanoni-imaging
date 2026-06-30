@@ -1,16 +1,30 @@
 services:
   orthanc:
+    # Pin to a specific tag/digest in production for reproducible deploys.
     image: orthancteam/orthanc
     container_name: fanoni-orthanc
+    env_file:
+      - .env
     ports:
-      - "8042:8042"   # Orthanc web UI + REST API
-      - "4242:4242"   # DICOM protocol (C-STORE, C-FIND, C-MOVE)
+      # Bound to loopback ONLY. Public access is exclusively through the host
+      # nginx reverse proxy (deploy/nginx-imaging.fanoni.ai.conf).
+      - "127.0.0.1:8042:8042"   # Orthanc REST API + DICOMweb
+      - "127.0.0.1:4242:4242"   # DICOM protocol (C-STORE/C-FIND/C-MOVE) — internal only
     volumes:
       - ./orthanc/orthanc.json:/etc/orthanc/orthanc.json:ro
       - ./orthanc/notify_fhir.lua:/etc/orthanc/notify_fhir.lua:ro
       - orthanc-storage:/var/lib/orthanc/db
     environment:
       VERBOSE_STARTUP: "true"
+      # Inject REST/DICOMweb credentials from .env. With AuthenticationEnabled=true
+      # and no users defined, Orthanc denies everything — i.e. this fails closed.
+      ORTHANC__REGISTERED_USERS: '{"${ORTHANC_USERNAME}":"${ORTHANC_PASSWORD}"}'
+      # FANONI_BRIDGE_BOT_URL / FANONI_BOT_TOKEN are passed through via env_file and
+      # read by notify_fhir.lua (os.getenv). They are intentionally NOT interpolated
+      # here so values like ".../$execute" survive verbatim.
+    extra_hosts:
+      # Lets notify_fhir.lua reach a FHIR server running on the Docker host (Linux).
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
 
 volumes:

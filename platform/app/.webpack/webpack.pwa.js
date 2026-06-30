@@ -27,6 +27,8 @@ const PROXY_TARGET = process.env.PROXY_TARGET;
 const PROXY_DOMAIN = process.env.PROXY_DOMAIN;
 const PROXY_PATH_REWRITE_FROM = process.env.PROXY_PATH_REWRITE_FROM;
 const PROXY_PATH_REWRITE_TO = process.env.PROXY_PATH_REWRITE_TO;
+// Fanoni: dev /dicomweb proxy target — defaults to the local Orthanc container (8042).
+const ORTHANC_PROXY_TARGET = process.env.ORTHANC_PROXY_TARGET || 'http://localhost:8042';
 const IS_COVERAGE = process.env.COVERAGE === 'true';
 
 const OHIF_PORT = Number(process.env.OHIF_PORT || 3000);
@@ -158,7 +160,7 @@ module.exports = (env, argv) => {
       },
       proxy: [
         {
-          '/dicomweb': 'http://localhost:5000',
+          '/dicomweb': ORTHANC_PROXY_TARGET,
         },
       ],
       static: [

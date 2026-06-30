@@ -5,47 +5,55 @@ on:
     branches: [master]
   workflow_dispatch:
 
+# Never let two deploys race; cancel an in-flight one when a newer push lands.
+concurrency:
+  group: deploy-imaging
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30 # OHIF build
+    timeout-minutes: 40 # OHIF build
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version-file: .node-version
           cache: 'yarn'
 
+      # Install the entire workspace from the repo ROOT. platform/app depends on
+      # hoisted root deps and sibling @ohif/* packages, so installing inside the
+      # child dir leaves the build unable to resolve them.
       - name: Install dependencies
-        working-directory: platform/app
         run: yarn install --frozen-lockfile
 
-      - name: Build OHIF
+      - name: Build OHIF viewer
         working-directory: platform/app
         env:
           NODE_ENV: production
           APP_CONFIG: config/default.js
           PUBLIC_URL: /
-        run: yarn build
+        run: yarn build:viewer
 
       - name: Deploy static files to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
-          username: root
+          username: ${{ secrets.VPS_USER || 'deploy' }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: platform/app/dist/*
           target: /var/www/imaging.fanoni.ai/
           strip_components: 3
+          overwrite: true
 
       - name: Reload nginx
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
-          username: root
+          username: ${{ secrets.VPS_USER || 'deploy' }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            nginx -t && systemctl reload nginx
-            echo "Deployed imaging.fanoni.ai at $(date)"
+            sudo nginx -t && sudo systemctl reload nginx
+            echo "Deployed imaging.fanoni.ai at $(date -u)"

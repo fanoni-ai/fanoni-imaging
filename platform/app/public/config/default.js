@@ -277,8 +277,10 @@ window.config = {
         qidoRoot: '/dicomweb',
         wadoRoot: '/dicomweb',
         qidoSupportsIncludeField: true,
-        supportsReject: true,
-        dicomUploadEnabled: true,
+        // Public viewer is read-only: destructive ops are disabled here and also
+        // blocked at the nginx proxy (limit_except GET). Ingestion is server-side.
+        supportsReject: false,
+        dicomUploadEnabled: false,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
