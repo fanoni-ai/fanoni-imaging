@@ -6,6 +6,8 @@ Seed Orthanc with real DICOM studies for the Fanoni demo worklist.
 - All studies use real pixel data (no empty shells)
 """
 
+import argparse
+import base64
 import copy
 import io
 import json
@@ -20,14 +22,32 @@ import math
 import pydicom
 from pydicom.uid import generate_uid
 
-ORTHANC = "http://localhost:8042"
+# Paths are resolved relative to the repo root (this file lives in <repo>/scripts/),
+# so the script is portable across checkouts.
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+NODE_MODULES = os.path.join(REPO_ROOT, 'node_modules')
 
 SRC = {
-    'MR':  '/Users/dafe/repos/fanoni-imaging/node_modules/dicomweb-client/testData/sample3.dcm',
-    'US':  '/Users/dafe/repos/fanoni-imaging/node_modules/dicomweb-client/testData/US-PAL-8-10x-echo.dcm',
-    'XA':  '/Users/dafe/repos/fanoni-imaging/node_modules/jpeg-lossless-decoder-js/tests/data/jpeg_lossless_sel1-8bit.dcm',
-    'CR':  '/Users/dafe/repos/fanoni-imaging/node_modules/dicomweb-client/testData/sample2.dcm',
+    'MR':  os.path.join(NODE_MODULES, 'dicomweb-client/testData/sample3.dcm'),
+    'US':  os.path.join(NODE_MODULES, 'dicomweb-client/testData/US-PAL-8-10x-echo.dcm'),
+    'XA':  os.path.join(NODE_MODULES, 'jpeg-lossless-decoder-js/tests/data/jpeg_lossless_sel1-8bit.dcm'),
+    'CR':  os.path.join(NODE_MODULES, 'dicomweb-client/testData/sample2.dcm'),
 }
+
+# DICOM Storage SOP Class UIDs per modality. The CR sample is reused for several
+# modalities (CT/MG); aligning SOPClassUID with the declared Modality keeps each
+# generated instance internally consistent for hanging protocols / MPR.
+MODALITY_SOP_CLASS = {
+    'CT': '1.2.840.10008.5.1.4.1.1.2',
+    'MR': '1.2.840.10008.5.1.4.1.1.4',
+    'CR': '1.2.840.10008.5.1.4.1.1.1',
+    'MG': '1.2.840.10008.5.1.4.1.1.1.2',
+    'US': '1.2.840.10008.5.1.4.1.1.6.1',
+}
+
+# Set from CLI args in main(); module-level so the small helpers can read them.
+ORTHANC = "http://localhost:8042"
+AUTH_HEADER = None
 
 TODAY = datetime.now()
 
@@ -327,6 +347,12 @@ def make_instance(src_ds, study_meta, series_meta, study_uid, series_uid, instan
     ds.SOPInstanceUID = generate_uid()
     ds.InstanceNumber = str(instance_number)
 
+    # Keep SOPClassUID consistent with the declared Modality (some series reuse a
+    # source image from a different modality, e.g. CT/MG built from the CR/XA samples).
+    sop_class = MODALITY_SOP_CLASS.get(series_meta['modality'])
+    if sop_class:
+        ds.SOPClassUID = sop_class
+
     # Spatial geometry for volumetric rendering
     orientation = series_meta.get('orientation', 'axial')
     iop, normal = ORIENTATION_VECTORS[orientation]
@@ -361,34 +387,64 @@ def make_instance(src_ds, study_meta, series_meta, study_uid, series_uid, instan
     return buf.getvalue()
 
 
+def _request(path, *, data=None, headers=None, method='GET'):
+    headers = dict(headers or {})
+    if AUTH_HEADER:
+        headers['Authorization'] = AUTH_HEADER
+    req = urllib.request.Request(f'{ORTHANC}{path}', data=data, headers=headers, method=method)
+    return urllib.request.urlopen(req)
+
+
 def delete_all_studies():
-    resp = urllib.request.urlopen(f'{ORTHANC}/studies')
-    studies = json.loads(resp.read())
+    studies = json.loads(_request('/studies').read())
     print(f'Deleting {len(studies)} existing studies...')
     for sid in studies:
-        req = urllib.request.Request(f'{ORTHANC}/studies/{sid}', method='DELETE')
         try:
-            urllib.request.urlopen(req)
-        except Exception:
-            pass
+            _request(f'/studies/{sid}', method='DELETE')
+        except Exception as exc:
+            print(f'  warning: failed to delete {sid}: {exc}')
     print('  done')
 
 
 def upload_instance(dicom_bytes):
-    req = urllib.request.Request(
-        f'{ORTHANC}/instances',
+    resp = _request(
+        '/instances',
         data=dicom_bytes,
         headers={'Content-Type': 'application/dicom'},
         method='POST',
     )
-    resp = urllib.request.urlopen(req)
     return json.loads(resp.read())
 
 
+def parse_args():
+    p = argparse.ArgumentParser(description='Seed Orthanc with demo DICOM studies for Fanoni.')
+    p.add_argument('--orthanc-url', default=os.environ.get('ORTHANC_URL', 'http://localhost:8042'),
+                   help='Orthanc base URL (default: $ORTHANC_URL or http://localhost:8042)')
+    p.add_argument('--username', default=os.environ.get('ORTHANC_USERNAME'),
+                   help='Orthanc Basic-auth username (default: $ORTHANC_USERNAME)')
+    p.add_argument('--password', default=os.environ.get('ORTHANC_PASSWORD'),
+                   help='Orthanc Basic-auth password (default: $ORTHANC_PASSWORD)')
+    p.add_argument('--wipe', action='store_true',
+                   help='DELETE every existing study before seeding. Destructive — off by default.')
+    return p.parse_args()
+
+
 def main():
-    print('=== Fanoni Imaging Demo Seed (Multi-Slice) ===\n')
-    delete_all_studies()
-    print()
+    global ORTHANC, AUTH_HEADER
+    args = parse_args()
+    ORTHANC = args.orthanc_url.rstrip('/')
+    if args.username:
+        token = base64.b64encode(f'{args.username}:{args.password or ""}'.encode()).decode()
+        AUTH_HEADER = f'Basic {token}'
+
+    print('=== Fanoni Imaging Demo Seed (Multi-Slice) ===')
+    print(f'Target: {ORTHANC}\n')
+
+    if args.wipe:
+        delete_all_studies()
+        print()
+    else:
+        print('(skipping wipe — pass --wipe to clear existing studies first)\n')
 
     srcs = load_sources()
     results = []
